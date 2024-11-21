@@ -1,0 +1,104 @@
+ښ�j%�(39) boot.es�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 21 2024 09:56:26[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (77) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (92) boot:  3 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (99) boot: End of partition table[0m
+[0;32mI (103) boot: Defaulting to factory image[0m
+[0;32mI (108) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=36c7ch (224380) map[0m
+[0;32mI (193) esp_image: segment 1: paddr=00046ca4 vaddr=3ffbdb60 size=05198h ( 20888) load[0m
+[0;32mI (201) esp_image: segment 2: paddr=0004be44 vaddr=40080000 size=041d4h ( 16852) load[0m
+[0;32mI (208) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=b9088h (757896) map[0m
+[0;32mI (468) esp_image: segment 4: paddr=001090b0 vaddr=400841d4 size=12c50h ( 76880) load[0m
+[0;32mI (510) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (510) boot: Disabling RNG early entropy source...[0m
+[0;32mI (522) cpu_start: Multicore app[0m
+[0;32mI (531) cpu_start: Pro cpu start user code[0m
+[0;32mI (531) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (531) cpu_start: Application information:[0m
+[0;32mI (534) cpu_start: Project name:     onoff_client[0m
+[0;32mI (539) cpu_start: App version:      1[0m
+[0;32mI (544) cpu_start: Compile time:     Oct 29 2024 14:19:53[0m
+[0;32mI (550) cpu_start: ELF file SHA256:  116263665...[0m
+[0;32mI (555) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (560) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (565) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (570) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (575) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (582) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (588) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (594) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (600) heap_init: At 3FFCB120 len 00014EE0 (83 KiB): DRAM[0m
+[0;32mI (606) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (613) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (619) heap_init: At 40096E24 len 000091DC (36 KiB): IRAM[0m
+[0;32mI (627) spi_flash: detected chip: generic[0m
+[0;32mI (630) spi_flash: flash io: dio[0m
+[0;32mI (635) coexist: coex firmware version: d96c1e51f[0m
+[0;32mI (640) main_task: Started on CPU0[0m
+[0;32mI (650) main_task: Calling app_main()[0m
+[0;32mI (650) EXAMPLE: Initializing...[0m
+[0;32mI (650) gpio: GPIO[25]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (660) gpio: GPIO[26]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (670) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+use esp timer !!!
+[0;31mE (680) esp_timer: Task is already initialized[0m
+[0;32mI (680) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:3 [0m
+[0;32mI (740) BTDM_INIT: BT controller compile version [4012cfb][0m
+[0;32mI (740) BTDM_INIT: Bluetooth MAC: 30:ae:a4:98:71:1e[0m
+[0;32mI (740) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (1150) EXAMPLE_NVS: Open namespace done, name "mesh_example"[0m
+Bluetooth Mesh v1.1 commit: [10f7fdc1a9]
+[0;31mE (1240) BLE_MESH: No settings handle found[0m
+[0;31mE (1240) BLE_MESH: Failed to set mesh/role data (err 4359)[0m
+[0;31mE (1240) BLE_MESH: No settings handle found[0m
+[0;31mE (1240) BLE_MESH: Failed to set mesh/p_netidx data (err 4359)[0m
+[0;31mE (1250) BLE_MESH: No settings handle found[0m
+[0;31mE (1250) BLE_MESH: Failed to set mesh/p_appidx data (err 4359)[0m
+[0;31mE (1260) BLE_MESH: No settings handle found[0m
+[0;31mE (1260) BLE_MESH: Failed to set mesh/pnk/0000 data (err 4359)[0m
+[0;31mE (1270) BLE_MESH: Failed to store NetKey 0x000[0m
+[0;31mE (1280) BLE_MESH: No settings handle found[0m
+[0;31mE (1280) BLE_MESH: Failed to set mesh/iv data (err 4359)[0m
+[0;31mE (1290) BLE_MESH: No settings handle found[0m
+[0;31mE (1290) BLE_MESH: Failed to set mesh/p_prov data (err 4359)[0m
+[0;32mI (1300) EXAMPLE: BLE Mesh Provisioner initialized[0m
+[0;31mE (1310) BLE_MESH: No settings handle found[0m
+[0;31mE (1310) BLE_MESH: Failed to set mesh/p_appidx data (err 4359)[0m
+[0;31mE (1310) BLE_MESH: No settings handle found[0m
+[0;31mE (1320) BLE_MESH: Failed to set mesh/pak/0000 data (err 4359)[0m
+[0;31mE (1330) BLE_MESH: Failed to store AppKey 0x000[0m
+[0;32mI (1330) EXAMPLE: ESP_BLE_MESH_PROVISIONER_PROV_ENABLE_COMP_EVT, err_code 0[0m
+[0;32mI (1340) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_LOCAL_APP_KEY_COMP_EVT, err_code 0[0m
+[0;31mE (1350) BLE_MESH: No settings handle found[0m
+[0;31mE (1350) BLE_MESH: Failed to set mesh/s/0002/b data (err 4359)[0m
+[0;31mE (1360) BLE_MESH: Failed to store mesh/s/0002/b[0m
+[0;32mI (1360) EXAMPLE: ESP_BLE_MESH_PROVISIONER_BIND_APP_KEY_TO_MODEL_COMP_EVT, err_code 0[0m
+0x0005[0;31mE (11300) BLE_MESH: Failed to find DST 0x0005[0m
+[0;31mE (11300) BLE_MESH: Not ready to send[0m
+[0;31mE (11300) BLE_MESH: Failed to send client message 0x00008203[0m
+0x0005[0;32mI (11310) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xffffffea, event = 0x01, addr: 0x0005, opcode: 0x8203[0m
+[0;31mE (11310) EXAMPLE: Send generic client message failed, opcode 0x8203[0m
+[0;32mI (11340) EXAMPLE_NVS: Store, key "onoff_client", length 6[0m
+[0;32mI (11340) EXAMPLE_NVS: Store, data: ff ff ff ff 00 01 [0m

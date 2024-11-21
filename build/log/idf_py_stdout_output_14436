@@ -1,0 +1,274 @@
+��j%�(39) boot.esp32: SPets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 21 2024 09:56:26[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (99) boot: End of partition table[0m
+[0;32mI (103) boot: Defaulting to factory image[0m
+[0;32mI (108) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=50404h (328708) map[0m
+[0;32mI (229) esp_image: segment 1: paddr=0006042c vaddr=3ffbdb60 size=060dch ( 24796) load[0m
+[0;32mI (238) esp_image: segment 2: paddr=00066510 vaddr=40080000 size=09b08h ( 39688) load[0m
+[0;32mI (254) esp_image: segment 3: paddr=00070020 vaddr=400d0020 size=12dc5ch (1236060) map[0m
+[0;32mI (678) esp_image: segment 4: paddr=0019dc84 vaddr=40089b08 size=13f88h ( 81800) load[0m
+[0;32mI (725) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (725) boot: Disabling RNG early entropy source...[0m
+[0;32mI (737) cpu_start: Multicore app[0m
+[0;32mI (746) cpu_start: Pro cpu start user code[0m
+[0;32mI (746) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (746) cpu_start: Application information:[0m
+[0;32mI (749) cpu_start: Project name:     onoff_client[0m
+[0;32mI (754) cpu_start: App version:      1[0m
+[0;32mI (759) cpu_start: Compile time:     Oct 29 2024 14:26:13[0m
+[0;32mI (765) cpu_start: ELF file SHA256:  1a38bd425...[0m
+[0;32mI (770) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (776) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (780) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (785) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (790) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (797) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (803) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (809) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (815) heap_init: At 3FFCFAF0 len 00010510 (65 KiB): DRAM[0m
+[0;32mI (821) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (828) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (834) heap_init: At 4009DA90 len 00002570 (9 KiB): IRAM[0m
+[0;32mI (842) spi_flash: detected chip: generic[0m
+[0;32mI (845) spi_flash: flash io: dio[0m
+[0;32mI (850) coexist: coex firmware version: d96c1e51f[0m
+[0;32mI (855) main_task: Started on CPU0[0m
+[0;32mI (865) main_task: Calling app_main()[0m
+[0;32mI (865) EXAMPLE: Initializing...[0m
+[0;32mI (865) gpio: GPIO[25]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (875) gpio: GPIO[26]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (885) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+use esp timer !!!
+[0;31mE (895) esp_timer: Task is already initialized[0m
+[0;32mI (895) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:3 [0m
+[0;32mI (945) BTDM_INIT: BT controller compile version [4012cfb][0m
+[0;32mI (955) BTDM_INIT: Bluetooth MAC: 30:ae:a4:98:71:1e[0m
+[0;32mI (955) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (1365) EXAMPLE_NVS: Open namespace done, name "mesh_example"[0m
+Bluetooth Mesh v1.1 commit: [10f7fdc1a9]
+[0;32mI (1475) EXAMPLE: BLE Mesh Provisioner initialized[0m
+[0;33mW (1485) BLE_MESH: AppKey exists, AppKeyIndex updated[0m
+[0;32mI (1495) EXAMPLE: ESP_BLE_MESH_PROVISIONER_PROV_ENABLE_COMP_EVT, err_code 0[0m
+[0;32mI (1495) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_LOCAL_APP_KEY_COMP_EVT, err_code 0[0m
+[0;32mI (1505) EXAMPLE: ESP_BLE_MESH_PROVISIONER_BIND_APP_KEY_TO_MODEL_COMP_EVT, err_code 0[0m
+I (1525) wifi:wifi driver task: 3ffdc814, prio:23, stack:6656, core=0
+I (1525) wifi:wifi firmware version: 3e0076f
+I (1525) wifi:wifi certification version: v7.0
+I (1525) wifi:config NVS flash: enabled
+I (1525) wifi:config nano formating: disabled
+I (1535) wifi:Init data frame dynamic rx buffer num: 32
+I (1535) wifi:Init static rx mgmt buffer num: 5
+I (1545) wifi:Init management short buffer num: 32
+I (1545) wifi:Init dynamic tx buffer num: 32
+I (1555) wifi:Init static rx buffer size: 1600
+I (1555) wifi:Init static rx buffer num: 10
+I (1555) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1565) wifi_init: rx ba win: 6[0m
+[0;32mI (1565) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1575) wifi_init: udp mbox: 6[0m
+[0;32mI (1575) wifi_init: tcp mbox: 6[0m
+[0;32mI (1575) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1585) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1585) wifi_init: tcp mss: 1440[0m
+[0;32mI (1595) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1595) wifi_init: WiFi RX IRAM OP enabled[0m
+I (1645) wifi:mode : sta (30:ae:a4:98:71:1c)
+I (1645) wifi:enable tsf
+[0;32mI (1645) EXAMPLE: wifi_init_sta finished.[0m
+I (6475) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy
+
+[0;32mI (6475) EXAMPLE: retry to connect to the AP[0m
+[0;32mI (6475) EXAMPLE: connect to the AP fail[0m
+[0;32mI (7475) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0005, opcode: 0x8204[0m
+[0;31mE (7475) EXAMPLE: example_ble_mesh_generic_client_cb: Get node info failed[0m
+[0;32mI (7635) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;31mE (7635) EXAMPLE: example_ble_mesh_generic_client_cb: Get node info failed[0m
+I (11305) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy
+
+[0;32mI (11315) EXAMPLE: retry to connect to the AP[0m
+[0;32mI (11315) EXAMPLE: connect to the AP fail[0m
+[0;32mI (11485) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0005, opcode: 0x8204[0m
+[0;31mE (11495) EXAMPLE: example_ble_mesh_generic_client_cb: Get node info failed[0m
+[0;32mI (11975) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;31mE (11975) EXAMPLE: example_ble_mesh_generic_client_cb: Get node info failed[0m
+I (16135) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy
+
+[0;32mI (16145) EXAMPLE: retry to connect to the AP[0m
+[0;32mI (16145) EXAMPLE: connect to the AP fail[0m
+[0;32mI (18805) EXAMPLE: ESP_BLE_MESH_PROVISIONER_RECV_UNPROV_ADV_PKT_EVT[0m
+[0;32mI (18815) EXAMPLE: address: 030402afa4c3, address type: 0, adv type: 0[0m
+[0;32mI (18815) EXAMPLE: device uuid: c3250bcbc188523ea1dd316afa1dca0a[0m
+[0;32mI (18825) EXAMPLE: oob info: 0, bearer: PB-GATT[0m
+[0;32mI (18835) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_UNPROV_DEV_COMP_EVT, err_code 0[0m
+I (20965) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy
+
+[0;32mI (20975) EXAMPLE: retry to connect to the AP[0m
+[0;32mI (20975) EXAMPLE: connect to the AP fail[0m
+[0;32mI (22155) EXAMPLE: PB-GATT link open[0m
+[0;33mW (25515) BT_HCI: hci cmd send: disconnect: hdl 0x0, rsn:0x13[0m
+[0;33mW (25515) BT_APPL: gattc_conn_cb: if=3 st=0 id=3 rsn=0x16[0m
+[0;32mI (25515) EXAMPLE: node index: 0x0, unicast address: 0x05, element num: 3, netkey index: 0x00[0m
+[0;32mI (25525) EXAMPLE: device uuid: c3250bcbc188523ea1dd316afa1dca0a[0m
+[0;32mI (25535) EXAMPLE: PB-GATT link close, reason 0x16[0m
+[0;33mW (25545) BT_HCI: hcif disc complete: hdl 0x0, rsn 0x16[0m
+[0;32mI (25575) EXAMPLE: ESP_BLE_MESH_PROVISIONER_SET_NODE_NAME_COMP_EVT, err_code 0[0m
+[0;32mI (25575) EXAMPLE: Node 0 name is: NODE-0[0m
+I (25805) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy
+
+[0;32mI (25805) EXAMPLE: retry to connect to the AP[0m
+[0;32mI (25805) EXAMPLE: connect to the AP fail[0m
+I (30635) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy
+
+[0;32mI (30635) EXAMPLE: connect to the AP fail[0m
+[0;32mI (30635) EXAMPLE: Failed to connect to SSID:Turtlee, password:11111111[0m
+[0;32mI (30635) main_task: Returned from app_main()[0m
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Oct 21 2024 09:56:26[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (99) boot: End of partition table[0m
+[0;32mI (103) boot: Defaulting to factory image[0m
+[0;32mI (108) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=50404h (328708) map[0m
+[0;32mI (229) esp_image: segment 1: paddr=0006042c vaddr=3ffbdb60 size=060dch ( 24796) load[0m
+[0;32mI (238) esp_image: segment 2: paddr=00066510 vaddr=40080000 size=09b08h ( 39688) load[0m
+[0;32mI (254) esp_image: segment 3: paddr=00070020 vaddr=400d0020 size=12dc5ch (1236060) map[0m
+[0;32mI (678) esp_image: segment 4: paddr=0019dc84 vaddr=40089b08 size=13f88h ( 81800) load[0m
+[0;32mI (725) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (725) boot: Disabling RNG early entropy source...[0m
+[0;32mI (737) cpu_start: Multicore app[0m
+[0;32mI (746) cpu_start: Pro cpu start user code[0m
+[0;32mI (746) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (746) cpu_start: Application information:[0m
+[0;32mI (749) cpu_start: Project name:     onoff_client[0m
+[0;32mI (754) cpu_start: App version:      1[0m
+[0;32mI (759) cpu_start: Compile time:     Oct 29 2024 14:26:13[0m
+[0;32mI (765) cpu_start: ELF file SHA256:  1a38bd425...[0m
+[0;32mI (770) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (775) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (780) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (785) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (790) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (797) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (803) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (809) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (815) heap_init: At 3FFCFAF0 len 00010510 (65 KiB): DRAM[0m
+[0;32mI (821) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (828) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (834) heap_init: At 4009DA90 len 00002570 (9 KiB): IRAM[0m
+[0;32mI (842) spi_flash: detected chip: generic[0m
+[0;32mI (845) spi_flash: flash io: dio[0m
+[0;32mI (850) coexist: coex firmware version: d96c1e51f[0m
+[0;32mI (855) main_task: Started on CPU0[0m
+[0;32mI (865) main_task: Calling app_main()[0m
+[0;32mI (865) EXAMPLE: Initializing...[0m
+[0;32mI (865) gpio: GPIO[25]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (875) gpio: GPIO[26]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (885) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+use esp timer !!!
+[0;31mE (895) esp_timer: Task is already initialized[0m
+[0;32mI (895) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:3 [0m
+[0;32mI (975) BTDM_INIT: BT controller compile version [4012cfb][0m
+[0;32mI (975) BTDM_INIT: Bluetooth MAC: 30:ae:a4:98:71:1e[0m
+[0;32mI (975) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (1375) EXAMPLE_NVS: Open namespace done, name "mesh_example"[0m
+Bluetooth Mesh v1.1 commit: [10f7fdc1a9]
+[0;32mI (1495) EXAMPLE: BLE Mesh Provisioner initialized[0m
+[0;33mW (1505) BLE_MESH: AppKey exists, AppKeyIndex updated[0m
+[0;32mI (1505) EXAMPLE: ESP_BLE_MESH_PROVISIONER_PROV_ENABLE_COMP_EVT, err_code 0[0m
+[0;32mI (1505) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_LOCAL_APP_KEY_COMP_EVT, err_code 0[0m
+[0;32mI (1515) EXAMPLE: ESP_BLE_MESH_PROVISIONER_BIND_APP_KEY_TO_MODEL_COMP_EVT, err_code 0[0m
+I (1535) wifi:wifi driver task: 3ffdc8cc, prio:23, stack:6656, core=0
+I (1555) wifi:wifi firmware version: 3e0076f
+I (1555) wifi:wifi certification version: v7.0
+I (1555) wifi:config NVS flash: enabled
+I (1555) wifi:config nano formating: disabled
+I (1555) wifi:Init data frame dynamic rx buffer num: 32
+I (1565) wifi:Init static rx mgmt buffer num: 5
+I (1565) wifi:Init management short buffer num: 32
+I (1575) wifi:Init dynamic tx buffer num: 32
+I (1575) wifi:Init static rx buffer size: 1600
+I (1575) wifi:Init static rx buffer num: 10
+I (1585) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1585) wifi_init: rx ba win: 6[0m
+[0;32mI (1595) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1595) wifi_init: udp mbox: 6[0m
+[0;32mI (1595) wifi_init: tcp mbox: 6[0m
+[0;32mI (1605) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1605) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1615) wifi_init: tcp mss: 1440[0m
+[0;32mI (1615) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1615) wifi_init: WiFi RX IRAM OP enabled[0m
+I (1635) wifi:mode : sta (30:ae:a4:98:71:1c)
+I (1635) wifi:enable tsf
+[0;32mI (1635) EXAMPLE: wifi_init_sta finished.[0m
+I (6465) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy
+
+[0;32mI (6465) EXAMPLE: retry to connect to the AP[0m
+[0;32mI (6465) EXAMPLE: connect to the AP fail[0m
+I (11295) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy
+
+[0;32mI (11295) EXAMPLE: retry to connect to the AP[0m
+[0;32mI (11295) EXAMPLE: connect to the AP fail[0m
+I (16115) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy
+
+[0;32mI (16125) EXAMPLE: retry to connect to the AP[0m
+[0;32mI (16125) EXAMPLE: connect to the AP fail[0m
+I (20955) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy
+
+[0;32mI (20955) EXAMPLE: retry to connect to the AP[0m
+[0;32mI (20955) EXAMPLE: connect to the AP fail[0m
+I (25775) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy
+
+[0;32mI (25785) EXAMPLE: retry to connect to the AP[0m
+[0;32mI (25785) EXAMPLE: connect to the AP fail[0m
+I (30615) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy
+
+[0;32mI (30615) EXAMPLE: connect to the AP fail[0m
+[0;32mI (30615) EXAMPLE: Failed to connect to SSID:Turtlee, password:11111111[0m
+[0;32mI (30625) main_task: Returned from app_main()[0m

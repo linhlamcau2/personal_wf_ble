@@ -1,0 +1,154 @@
++ښ�j%�(39) boot.esp3ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 21 2024 09:56:26[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (77) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (99) boot: End of partition table[0m
+[0;32mI (103) boot: Defaulting to factory image[0m
+[0;32mI (108) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3694ch (223564) map[0m
+[0;32mI (193) esp_image: segment 1: paddr=00046974 vaddr=3ffbdb60 size=0518ch ( 20876) load[0m
+[0;32mI (201) esp_image: segment 2: paddr=0004bb08 vaddr=40080000 size=04510h ( 17680) load[0m
+[0;32mI (208) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=b85c8h (755144) map[0m
+[0;32mI (467) esp_image: segment 4: paddr=001085f0 vaddr=40084510 size=12914h ( 76052) load[0m
+[0;32mI (509) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (509) boot: Disabling RNG early entropy source...[0m
+[0;32mI (521) cpu_start: Multicore app[0m
+[0;32mI (529) cpu_start: Pro cpu start user code[0m
+[0;32mI (529) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (529) cpu_start: Application information:[0m
+[0;32mI (532) cpu_start: Project name:     onoff_client[0m
+[0;32mI (538) cpu_start: App version:      1[0m
+[0;32mI (542) cpu_start: Compile time:     Oct 29 2024 14:26:13[0m
+[0;32mI (548) cpu_start: ELF file SHA256:  a98f41ae3...[0m
+[0;32mI (554) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (559) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (564) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (569) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (574) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (581) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (587) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (593) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (599) heap_init: At 3FFCB0A8 len 00014F58 (83 KiB): DRAM[0m
+[0;32mI (605) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (611) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (618) heap_init: At 40096E24 len 000091DC (36 KiB): IRAM[0m
+[0;32mI (626) spi_flash: detected chip: generic[0m
+[0;32mI (629) spi_flash: flash io: dio[0m
+[0;32mI (633) coexist: coex firmware version: d96c1e51f[0m
+[0;32mI (639) main_task: Started on CPU0[0m
+[0;32mI (649) main_task: Calling app_main()[0m
+[0;32mI (649) EXAMPLE: Initializing...[0m
+[0;32mI (649) gpio: GPIO[25]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (659) gpio: GPIO[26]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (669) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+use esp timer !!!
+[0;31mE (679) esp_timer: Task is already initialized[0m
+[0;32mI (679) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:3 [0m
+[0;32mI (739) BTDM_INIT: BT controller compile version [4012cfb][0m
+[0;32mI (739) BTDM_INIT: Bluetooth MAC: 30:ae:a4:98:71:1e[0m
+[0;32mI (739) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (1129) EXAMPLE_NVS: Open namespace done, name "mesh_example"[0m
+Bluetooth Mesh v1.1 commit: [10f7fdc1a9]
+[0;32mI (1249) EXAMPLE: BLE Mesh Provisioner initialized[0m
+[0;33mW (1259) BLE_MESH: AppKey exists, AppKeyIndex updated[0m
+[0;32mI (1259) EXAMPLE: ESP_BLE_MESH_PROVISIONER_PROV_ENABLE_COMP_EVT, err_code 0[0m
+[0;32mI (1269) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_LOCAL_APP_KEY_COMP_EVT, err_code 0[0m
+[0;32mI (1269) EXAMPLE: ESP_BLE_MESH_PROVISIONER_BIND_APP_KEY_TO_MODEL_COMP_EVT, err_code 0[0m
+[0;32mI (1299) EXAMPLE: ESP_BLE_MESH_PROVISIONER_RECV_UNPROV_ADV_PKT_EVT[0m
+[0;32mI (1299) EXAMPLE: address: 030402afa4c3, address type: 0, adv type: 0[0m
+[0;32mI (1299) EXAMPLE: device uuid: c3250bcbc188523ea1dd316afa1dca0a[0m
+[0;32mI (1309) EXAMPLE: oob info: 0, bearer: PB-GATT[0m
+[0;32mI (1329) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_UNPROV_DEV_COMP_EVT, err_code 0[0m
+[0;33mW (1629) BT_HCI: hcif disc complete: hdl 0x0, rsn 0x3e[0m
+[0;32mI (4949) EXAMPLE: PB-GATT link open[0m
+[0;33mW (7989) BT_HCI: hci cmd send: disconnect: hdl 0x0, rsn:0x13[0m
+[0;33mW (7999) BT_APPL: gattc_conn_cb: if=3 st=0 id=3 rsn=0x16[0m
+[0;32mI (7999) EXAMPLE: node index: 0x0, unicast address: 0x05, element num: 3, netkey index: 0x00[0m
+[0;32mI (8009) EXAMPLE: device uuid: c3250bcbc188523ea1dd316afa1dca0a[0m
+[0;32mI (8009) EXAMPLE: PB-GATT link close, reason 0x16[0m
+[0;33mW (8029) BT_HCI: hcif disc complete: hdl 0x0, rsn 0x16[0m
+[0;32mI (8059) EXAMPLE: ESP_BLE_MESH_PROVISIONER_SET_NODE_NAME_COMP_EVT, err_code 0[0m
+[0;32mI (8059) EXAMPLE: Node 0 name is: NODE-0[0m
+[0;32mI (9449) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x00, addr: 0x0005, opcode: 0x8008[0m
+[0;32mI (9449) EXAMPLE: composition data 1102070033336900070000000602000002000300001003120412110200001102010000000301001003120412110200000000030100100312041211020000[0m
+[0;32mI (9989) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x0000[0m
+[0;32mI (10219) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x803d[0m
+[0;31mE (11259) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (11259) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (11259) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (11269) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (11279) EXAMPLE_NVS: Store, data: 00 00 00 00 01 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (11279) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (20239) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (20249) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8201[0m
+[0;31mE (21289) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (21289) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (21289) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (21319) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (21319) EXAMPLE_NVS: Store, data: 00 00 00 00 02 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (21319) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (30269) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (30269) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8201[0m
+[0;32mI (31359) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (31369) EXAMPLE_NVS: Store, data: 00 00 00 00 03 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (31369) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (40299) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (40299) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8201[0m
+[0;33mW (41339) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (41339) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;31mE (41349) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (41359) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (41369) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (41419) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (41429) EXAMPLE_NVS: Store, data: 00 00 00 00 05 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (41429) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (50329) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (50329) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8201[0m
+[0;33mW (51399) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (51399) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;31mE (51409) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (51419) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (51429) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (51489) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (51489) EXAMPLE_NVS: Store, data: 00 00 00 00 07 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (51489) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (51679) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (51679) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;33mW (60359) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (60359) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8201[0m
+[0;32mI (61539) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (61539) EXAMPLE_NVS: Store, data: 00 00 00 00 08 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (61539) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (61589) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (61589) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;33mW (70399) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (70399) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8201[0m
+[0;31mE (71539) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (71539) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (71539) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (71559) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (71569) EXAMPLE_NVS: Store, data: 00 00 00 00 09 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (71569) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (80439) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (80439) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8201[0m

@@ -1,0 +1,104 @@
+[1/5] cmd.exe /C "cd /D C:\onoff_client\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/onoff_client/build/partition_table/partition-table.bin C:/onoff_client/build/onoff_client.bin"
+onoff_client.bin binary size 0x1a1e40 bytes. Smallest app partition is 0x200000 bytes. 0x5e1c0 bytes (18%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\onoff_client\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/onoff_client/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/3] cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.2.2\components\esptool_py && C:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Espresptool.py --chip esp32 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x10000 onoff_client.bin 0x8000 partition_table/partition-table.bin 0xd000 ota_data_initial.bin
+esptool.py v4.7.0
+Serial port COM3
+Connecting......
+Chip is ESP32-D0WD (revision v1.0)
+Features: WiFi, BT, Dual Core, Coding Scheme None
+Crystal is 40MHz
+MAC: 30:ae:a4:98:71:1c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x001b1fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000d000 to 0x0000efff...
+Compressed 26720 bytes to 16350...
+Writing at 0x00001000... (100 %)
+Wrote 26720 bytes (16350 compressed) at 0x00001000 in 0.8 seconds (effective 271.7 kbit/s)...
+Hash of data verified.
+Compressed 1711680 bytes to 1014800...
+Writing at 0x00010000... (1 %)
+Writing at 0x0001c635... (3 %)
+Writing at 0x00030599... (4 %)
+Writing at 0x0003f8d6... (6 %)
+Writing at 0x0004b3c0... (8 %)
+Writing at 0x00051f09... (9 %)
+Writing at 0x00056e72... (11 %)
+Writing at 0x0006147a... (12 %)
+Writing at 0x0006ab78... (14 %)
+Writing at 0x000703f5... (16 %)
+Writing at 0x00075ff1... (17 %)
+Writing at 0x0007be16... (19 %)
+Writing at 0x00081a22... (20 %)
+Writing at 0x00087452... (22 %)
+Writing at 0x0008d04e... (24 %)
+Writing at 0x00092fd1... (25 %)
+Writing at 0x000995b3... (27 %)
+Writing at 0x000a019c... (29 %)
+Writing at 0x000a6aac... (30 %)
+Writing at 0x000acbbc... (32 %)
+Writing at 0x000b32df... (33 %)
+Writing at 0x000baab4... (35 %)
+Writing at 0x000c1d97... (37 %)
+Writing at 0x000c7c49... (38 %)
+Writing at 0x000cdeaa... (40 %)
+Writing at 0x000d3db2... (41 %)
+Writing at 0x000da338... (43 %)
+Writing at 0x000e05d2... (45 %)
+Writing at 0x000e66fc... (46 %)
+Writing at 0x000ecb85... (48 %)
+Writing at 0x000f2dca... (50 %)
+Writing at 0x000f90d0... (51 %)
+Writing at 0x000ff179... (53 %)
+Writing at 0x001050de... (54 %)
+Writing at 0x0010ae7d... (56 %)
+Writing at 0x001116b0... (58 %)
+Writing at 0x001172dd... (59 %)
+Writing at 0x0011d028... (61 %)
+Writing at 0x00122a3d... (62 %)
+Writing at 0x00127bdc... (64 %)
+Writing at 0x0012d223... (66 %)
+Writing at 0x001324e6... (67 %)
+Writing at 0x00137b84... (69 %)
+Writing at 0x0013d150... (70 %)
+Writing at 0x001428e0... (72 %)
+Writing at 0x0014887f... (74 %)
+Writing at 0x0014e294... (75 %)
+Writing at 0x00153f2a... (77 %)
+Writing at 0x00159bfb... (79 %)
+Writing at 0x0015f425... (80 %)
+Writing at 0x00165102... (82 %)
+Writing at 0x0016abdf... (83 %)
+Writing at 0x001706d0... (85 %)
+Writing at 0x0017677a... (87 %)
+Writing at 0x0017cbec... (88 %)
+Writing at 0x0018308c... (90 %)
+Writing at 0x0018d4b0... (91 %)
+Writing at 0x00195031... (93 %)
+Writing at 0x0019b0c8... (95 %)
+Writing at 0x001a0c9e... (96 %)
+Writing at 0x001a6dd6... (98 %)
+Writing at 0x001ac9d8... (100 %)
+Wrote 1711680 bytes (1014800 compressed) at 0x00010000 in 24.0 seconds (effective 570.0 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 120...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (120 compressed) at 0x00008000 in 0.1 seconds (effective 352.8 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 31...
+Writing at 0x0000d000... (100 %)
+Wrote 8192 bytes (31 compressed) at 0x0000d000 in 0.1 seconds (effective 518.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+essif/frameworks/esp-idf-v5.2.2 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.2_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/onoff_client/build -P C:/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/run_serial_tool.cmake"

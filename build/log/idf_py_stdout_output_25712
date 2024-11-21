@@ -1,0 +1,715 @@
+
+B��J��ѹesp32: SPI Speed      : 40M�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Oct 21 2024 09:56:26[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (99) boot: End of partition table[0m
+[0;32mI (103) boot: Defaulting to factory image[0m
+[0;32mI (108) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=50504h (328964) map[0m
+[0;32mI (229) esp_image: segment 1: paddr=0006052c vaddr=3ffbdb60 size=060dch ( 24796) load[0m
+[0;32mI (238) esp_image: segment 2: paddr=00066610 vaddr=40080000 size=09a08h ( 39432) load[0m
+[0;32mI (254) esp_image: segment 3: paddr=00070020 vaddr=400d0020 size=12ddb8h (1236408) map[0m
+[0;32mI (678) esp_image: segment 4: paddr=0019dde0 vaddr=40089a08 size=14088h ( 82056) load[0m
+[0;32mI (725) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (725) boot: Disabling RNG early entropy source...[0m
+[0;32mI (737) cpu_start: Multicore app[0m
+[0;32mI (746) cpu_start: Pro cpu start user code[0m
+[0;32mI (746) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (746) cpu_start: Application information:[0m
+[0;32mI (749) cpu_start: Project name:     onoff_client[0m
+[0;32mI (754) cpu_start: App version:      1[0m
+[0;32mI (759) cpu_start: Compile time:     Oct 29 2024 14:26:13[0m
+[0;32mI (765) cpu_start: ELF file SHA256:  5aa0a70bc...[0m
+[0;32mI (770) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (776) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (780) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (785) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (790) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (797) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (803) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (809) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (815) heap_init: At 3FFCFB18 len 000104E8 (65 KiB): DRAM[0m
+[0;32mI (822) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (828) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (834) heap_init: At 4009DA90 len 00002570 (9 KiB): IRAM[0m
+[0;32mI (842) spi_flash: detected chip: generic[0m
+[0;32mI (845) spi_flash: flash io: dio[0m
+[0;32mI (850) coexist: coex firmware version: d96c1e51f[0m
+[0;32mI (855) main_task: Started on CPU0[0m
+[0;32mI (865) main_task: Calling app_main()[0m
+[0;32mI (865) EXAMPLE: Initializing...[0m
+[0;32mI (865) gpio: GPIO[25]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (875) gpio: GPIO[26]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (885) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+use esp timer !!!
+[0;31mE (895) esp_timer: Task is already initialized[0m
+[0;32mI (895) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:3 [0m
+[0;32mI (975) BTDM_INIT: BT controller compile version [4012cfb][0m
+[0;32mI (975) BTDM_INIT: Bluetooth MAC: 30:ae:a4:98:71:1e[0m
+[0;32mI (975) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (1385) EXAMPLE_NVS: Open namespace done, name "mesh_example"[0m
+Bluetooth Mesh v1.1 commit: [10f7fdc1a9]
+[0;32mI (1495) EXAMPLE: BLE Mesh Provisioner initialized[0m
+[0;33mW (1505) BLE_MESH: AppKey exists, AppKeyIndex updated[0m
+[0;32mI (1505) EXAMPLE: ESP_BLE_MESH_PROVISIONER_PROV_ENABLE_COMP_EVT, err_code 0[0m
+[0;32mI (1505) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_LOCAL_APP_KEY_COMP_EVT, err_code 0[0m
+[0;32mI (1515) EXAMPLE: ESP_BLE_MESH_PROVISIONER_BIND_APP_KEY_TO_MODEL_COMP_EVT, err_code 0[0m
+I (1535) wifi:wifi driver task: 3ffdc8a0, prio:23, stack:6656, core=0
+I (1555) wifi:wifi firmware version: 3e0076f
+I (1555) wifi:wifi certification version: v7.0
+I (1555) wifi:config NVS flash: enabled
+I (1555) wifi:config nano formating: disabled
+I (1555) wifi:Init data frame dynamic rx buffer num: 32
+I (1565) wifi:Init static rx mgmt buffer num: 5
+I (1565) wifi:Init management short buffer num: 32
+I (1575) wifi:Init dynamic tx buffer num: 32
+I (1575) wifi:Init static rx buffer size: 1600
+I (1575) wifi:Init static rx buffer num: 10
+I (1585) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1595) wifi_init: rx ba win: 6[0m
+[0;32mI (1595) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1595) wifi_init: udp mbox: 6[0m
+[0;32mI (1595) wifi_init: tcp mbox: 6[0m
+[0;32mI (1605) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1605) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1615) wifi_init: tcp mss: 1440[0m
+[0;32mI (1615) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1615) wifi_init: WiFi RX IRAM OP enabled[0m
+I (1635) wifi:mode : sta (30:ae:a4:98:71:1c)
+I (1635) wifi:enable tsf
+[0;32mI (1635) EXAMPLE: wifi_init_sta finished.[0m
+I (1715) wifi:new:<9,0>, old:<1,0>, ap:<255,255>, sta:<9,0>, prof:1
+I (1715) wifi:state: init -> auth (b0)
+I (1735) wifi:state: auth -> assoc (0)
+I (1745) wifi:state: assoc -> run (10)
+I (1775) wifi:connected with Turtlee, aid = 1, channel 9, BW20, bssid = 56:6d:d0:96:10:ca
+I (1775) wifi:security: WPA2-PSK, phy: bgn, rssi: -71
+I (1785) wifi:pm start, type: 1
+
+I (1785) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (1805) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (2795) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (2795) EXAMPLE: got ip:172.20.10.3[0m
+[0;32mI (2795) EXAMPLE: connected to ap SSID:Turtlee password:11111111[0m
+[0;32mI (2805) mqtts_example: [APP] Free memory: 113912 bytes[0m
+[0;32mI (2805) mqtts_example: Other event id:7[0m
+[0;32mI (2815) main_task: Returned from app_main()[0m
+I (2845) wifi:<ba-add>idx:0 (ifx:0, 56:6d:d0:96:10:ca), tid:0, ssn:2, winSize:64
+[0;32mI (2935) mqtts_example: MQTT_EVENT_CONNECTED[0m
+[0;32mI (2945) mqtts_example: sent subscribe successful, msg_id=16374[0m
+[0;32mI (2955) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=16374[0m
+[0;32mI (7805) EXAMPLE: ESP_BLE_MESH_PROVISIONER_RECV_UNPROV_ADV_PKT_EVT[0m
+[0;32mI (7805) EXAMPLE: address: 030402afa4c3, address type: 0, adv type: 0[0m
+[0;32mI (7815) EXAMPLE: device uuid: c3250bcbc188523ea1dd316afa1dca0a[0m
+[0;32mI (7815) EXAMPLE: oob info: 0, bearer: PB-GATT[0m
+[0;32mI (7825) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_UNPROV_DEV_COMP_EVT, err_code 0[0m
+[0;32mI (10775) EXAMPLE: PB-GATT link open[0m
+[0;33mW (13925) BT_HCI: hci cmd send: disconnect: hdl 0x0, rsn:0x13[0m
+[0;33mW (13925) BT_APPL: gattc_conn_cb: if=3 st=0 id=3 rsn=0x16[0m
+[0;32mI (13925) EXAMPLE: node index: 0x0, unicast address: 0x05, element num: 3, netkey index: 0x00[0m
+[0;32mI (13935) EXAMPLE: device uuid: c3250bcbc188523ea1dd316afa1dca0a[0m
+[0;32mI (13945) EXAMPLE: PB-GATT link close, reason 0x16[0m
+[0;32mI (13975) EXAMPLE: ESP_BLE_MESH_PROVISIONER_SET_NODE_NAME_COMP_EVT, err_code 0[0m
+[0;32mI (13985) EXAMPLE: Node 0 name is: NODE-0[0m
+[0;33mW (13995) BT_HCI: hcif disc complete: hdl 0x0, rsn 0x16[0m
+[0;33mW (23975) BLE_MESH: Receive configuration status message timeout[0m
+[0;32mI (23985) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8008[0m
+[0;32mI (25425) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x00, addr: 0x0005, opcode: 0x8008[0m
+[0;32mI (25425) EXAMPLE: composition data 1102070033336900070000000602000002000300001003120412110200001102010000000301001003120412110200000000030100100312041211020000[0m
+[0;32mI (26335) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x0000[0m
+[0;32mI (26565) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (26875) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x00, addr: 0x0005, opcode: 0x8201[0m
+addr: 0x0005
+[0;32mI (26875) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0005
+ get addr send: 0x0005
+[0;32mI (26885) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_GET onoff: 0x00[0m
+set 1 addr send: 0x0005
+common1.addr=0x0005[0;32mI (27075) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+addr: 0x0005
+[0;32mI (27075) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0005
+set addr send: 0x0005
+[0;32mI (27085) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (32025) mqtts_example: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/16
+DATA={"method":"setValue","params":{"onoff":0,"addr":"0x0006"}}
+HEX: 0x0006
+Integer value: 0
+send -> 0x0006,0addr send: 0x0006addr send 2: 0x0006[0;32mI (32055) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (32055) EXAMPLE_NVS: Store, data: 00 00 00 00 02 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (32065) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;31mE (32075) BLE_MESH: Busy sending message to DST 0x0006[0m
+[0;32mI (32075) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0006, opcode: 0x8201[0m
+[0;31mE (32085) EXAMPLE: Send generic client message failed, opcode 0x8201[0m
+[0;33mW (42065) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (42065) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (42075) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0005
+[0;32mI (42175) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+addr: 0x0005
+[0;32mI (42175) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0005
+set addr send: 0x0005
+[0;32mI (42185) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (5582695) mqtts_example: Other event id:7[0m
+[0;31mE (5582695) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5582695) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5582695) mqtt_client: Error transport connect[0m
+[0;32mI (5582705) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5582705) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5582715) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5582725) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5597725) mqtts_example: Other event id:7[0m
+[0;31mE (5597725) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5597725) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5597725) mqtt_client: Error transport connect[0m
+[0;32mI (5597735) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5597735) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5597745) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5597755) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5612755) mqtts_example: Other event id:7[0m
+[0;31mE (5612755) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5612755) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5612755) mqtt_client: Error transport connect[0m
+[0;32mI (5612765) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5612765) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5612775) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5612785) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5627785) mqtts_example: Other event id:7[0m
+[0;31mE (5627785) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5627785) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5627785) mqtt_client: Error transport connect[0m
+[0;32mI (5627795) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5627795) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5627805) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5627815) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5642815) mqtts_example: Other event id:7[0m
+[0;31mE (5642815) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5642815) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5642815) mqtt_client: Error transport connect[0m
+[0;32mI (5642825) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5642825) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5642835) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5642845) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5657845) mqtts_example: Other event id:7[0m
+[0;31mE (5657845) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5657845) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5657845) mqtt_client: Error transport connect[0m
+[0;32mI (5657855) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5657855) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5657865) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5657875) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5672875) mqtts_example: Other event id:7[0m
+[0;31mE (5672875) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5672875) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5672875) mqtt_client: Error transport connect[0m
+[0;32mI (5672885) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5672885) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5672895) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5672905) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5687905) mqtts_example: Other event id:7[0m
+[0;31mE (5687905) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5687905) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5687905) mqtt_client: Error transport connect[0m
+[0;32mI (5687915) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5687915) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5687925) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5687935) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5702935) mqtts_example: Other event id:7[0m
+[0;31mE (5702935) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5702935) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5702935) mqtt_client: Error transport connect[0m
+[0;32mI (5702945) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5702945) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5702955) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5702965) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5717965) mqtts_example: Other event id:7[0m
+[0;31mE (5717965) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5717965) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5717965) mqtt_client: Error transport connect[0m
+[0;32mI (5717975) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5717975) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5717985) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5717995) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5732995) mqtts_example: Other event id:7[0m
+[0;31mE (5732995) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5732995) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5732995) mqtt_client: Error transport connect[0m
+[0;32mI (5733005) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5733005) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5733015) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5733025) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5748025) mqtts_example: Other event id:7[0m
+[0;31mE (5748025) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5748025) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5748025) mqtt_client: Error transport connect[0m
+[0;32mI (5748035) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5748035) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5748045) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5748055) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5763055) mqtts_example: Other event id:7[0m
+[0;31mE (5763055) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5763055) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5763055) mqtt_client: Error transport connect[0m
+[0;32mI (5763065) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5763065) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5763075) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5763085) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5778085) mqtts_example: Other event id:7[0m
+[0;31mE (5778085) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5778085) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5778085) mqtt_client: Error transport connect[0m
+[0;32mI (5778095) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5778095) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5778105) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5778115) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5793115) mqtts_example: Other event id:7[0m
+[0;31mE (5793115) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5793115) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5793115) mqtt_client: Error transport connect[0m
+[0;32mI (5793125) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5793125) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5793135) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5793145) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5808145) mqtts_example: Other event id:7[0m
+[0;31mE (5808145) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5808145) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5808145) mqtt_client: Error transport connect[0m
+[0;32mI (5808155) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5808155) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5808165) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5808175) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5823175) mqtts_example: Other event id:7[0m
+[0;31mE (5823175) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5823175) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5823175) mqtt_client: Error transport connect[0m
+[0;32mI (5823185) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5823185) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5823195) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5823205) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5838205) mqtts_example: Other event id:7[0m
+[0;31mE (5838205) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5838205) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5838205) mqtt_client: Error transport connect[0m
+[0;32mI (5838215) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5838215) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5838225) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5838235) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5853235) mqtts_example: Other event id:7[0m
+[0;31mE (5853235) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5853235) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5853235) mqtt_client: Error transport connect[0m
+[0;32mI (5853245) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5853245) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5853255) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5853265) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5868265) mqtts_example: Other event id:7[0m
+[0;31mE (5868265) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5868265) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5868265) mqtt_client: Error transport connect[0m
+[0;32mI (5868275) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5868275) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5868285) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5868295) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5883295) mqtts_example: Other event id:7[0m
+[0;31mE (5883295) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5883295) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5883295) mqtt_client: Error transport connect[0m
+[0;32mI (5883305) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5883305) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5883315) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5883325) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5898325) mqtts_example: Other event id:7[0m
+[0;31mE (5898325) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5898325) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5898325) mqtt_client: Error transport connect[0m
+[0;32mI (5898335) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5898335) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5898345) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5898355) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5913355) mqtts_example: Other event id:7[0m
+[0;31mE (5913355) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5913355) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5913355) mqtt_client: Error transport connect[0m
+[0;32mI (5913365) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5913365) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5913375) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5913385) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5928385) mqtts_example: Other event id:7[0m
+[0;31mE (5928385) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5928385) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5928385) mqtt_client: Error transport connect[0m
+[0;32mI (5928395) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5928395) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5928405) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5928415) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5943415) mqtts_example: Other event id:7[0m
+[0;31mE (5943415) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5943415) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5943415) mqtt_client: Error transport connect[0m
+[0;32mI (5943425) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5943425) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5943435) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5943445) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5958445) mqtts_example: Other event id:7[0m
+[0;31mE (5958445) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5958445) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5958445) mqtt_client: Error transport connect[0m
+[0;32mI (5958455) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5958455) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5958465) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5958475) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5973475) mqtts_example: Other event id:7[0m
+[0;31mE (5973475) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5973475) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5973475) mqtt_client: Error transport connect[0m
+[0;32mI (5973485) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5973485) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5973495) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5973505) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5988505) mqtts_example: Other event id:7[0m
+[0;31mE (5988505) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (5988505) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (5988505) mqtt_client: Error transport connect[0m
+[0;32mI (5988515) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (5988515) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (5988525) mqtts_example: Last errno string (Success)[0m
+[0;32mI (5988535) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6003535) mqtts_example: Other event id:7[0m
+[0;31mE (6003535) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6003535) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6003535) mqtt_client: Error transport connect[0m
+[0;32mI (6003545) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6003545) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6003555) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6003565) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6018565) mqtts_example: Other event id:7[0m
+[0;31mE (6018565) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6018565) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6018565) mqtt_client: Error transport connect[0m
+[0;32mI (6018575) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6018575) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6018585) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6018595) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6033595) mqtts_example: Other event id:7[0m
+[0;31mE (6033595) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6033595) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6033595) mqtt_client: Error transport connect[0m
+[0;32mI (6033605) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6033605) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6033615) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6033625) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6048625) mqtts_example: Other event id:7[0m
+[0;31mE (6048625) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6048625) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6048625) mqtt_client: Error transport connect[0m
+[0;32mI (6048635) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6048635) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6048645) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6048655) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6063655) mqtts_example: Other event id:7[0m
+[0;31mE (6063655) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6063655) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6063655) mqtt_client: Error transport connect[0m
+[0;32mI (6063665) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6063665) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6063675) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6063685) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6078685) mqtts_example: Other event id:7[0m
+[0;31mE (6078685) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6078685) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6078685) mqtt_client: Error transport connect[0m
+[0;32mI (6078695) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6078695) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6078705) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6078715) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6093715) mqtts_example: Other event id:7[0m
+[0;31mE (6093715) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6093715) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6093715) mqtt_client: Error transport connect[0m
+[0;32mI (6093725) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6093725) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6093735) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6093745) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6108745) mqtts_example: Other event id:7[0m
+[0;31mE (6108745) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6108745) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6108745) mqtt_client: Error transport connect[0m
+[0;32mI (6108755) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6108755) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6108765) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6108775) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6123775) mqtts_example: Other event id:7[0m
+[0;31mE (6123775) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6123775) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6123775) mqtt_client: Error transport connect[0m
+[0;32mI (6123785) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6123785) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6123795) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6123805) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6138805) mqtts_example: Other event id:7[0m
+[0;31mE (6138805) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6138805) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6138805) mqtt_client: Error transport connect[0m
+[0;32mI (6138815) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6138815) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6138825) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6138835) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6153835) mqtts_example: Other event id:7[0m
+[0;31mE (6153835) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6153835) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6153835) mqtt_client: Error transport connect[0m
+[0;32mI (6153845) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6153845) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6153855) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6153865) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6168865) mqtts_example: Other event id:7[0m
+[0;31mE (6168865) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6168865) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6168865) mqtt_client: Error transport connect[0m
+[0;32mI (6168875) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6168875) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6168885) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6168895) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6183895) mqtts_example: Other event id:7[0m
+[0;31mE (6183895) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6183895) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6183895) mqtt_client: Error transport connect[0m
+[0;32mI (6183905) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6183905) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6183915) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6183925) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6198925) mqtts_example: Other event id:7[0m
+[0;31mE (6198925) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6198925) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6198925) mqtt_client: Error transport connect[0m
+[0;32mI (6198935) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6198935) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6198945) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6198955) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6213955) mqtts_example: Other event id:7[0m
+[0;31mE (6213955) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6213955) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6213955) mqtt_client: Error transport connect[0m
+[0;32mI (6213965) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6213965) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6213975) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6213985) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6228985) mqtts_example: Other event id:7[0m
+[0;31mE (6228985) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6228985) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6228985) mqtt_client: Error transport connect[0m
+[0;32mI (6228995) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6228995) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6229005) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6229015) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6244015) mqtts_example: Other event id:7[0m
+[0;31mE (6244015) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6244015) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6244015) mqtt_client: Error transport connect[0m
+[0;32mI (6244025) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6244025) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6244035) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6244045) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6259045) mqtts_example: Other event id:7[0m
+[0;31mE (6259045) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6259045) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6259045) mqtt_client: Error transport connect[0m
+[0;32mI (6259055) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6259055) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6259065) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6259075) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6274075) mqtts_example: Other event id:7[0m
+[0;31mE (6274075) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6274075) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6274075) mqtt_client: Error transport connect[0m
+[0;32mI (6274085) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6274085) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6274095) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6274105) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6289105) mqtts_example: Other event id:7[0m
+[0;31mE (6289105) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6289105) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6289105) mqtt_client: Error transport connect[0m
+[0;32mI (6289115) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6289115) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6289125) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6289135) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6304135) mqtts_example: Other event id:7[0m
+[0;31mE (6304135) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6304135) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6304135) mqtt_client: Error transport connect[0m
+[0;32mI (6304145) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6304145) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6304155) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6304165) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6319165) mqtts_example: Other event id:7[0m
+[0;31mE (6319165) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6319165) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6319165) mqtt_client: Error transport connect[0m
+[0;32mI (6319175) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6319175) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6319185) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6319195) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6334195) mqtts_example: Other event id:7[0m
+[0;31mE (6334195) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6334195) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6334195) mqtt_client: Error transport connect[0m
+[0;32mI (6334205) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6334205) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6334215) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6334225) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6349225) mqtts_example: Other event id:7[0m
+[0;31mE (6349225) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6349225) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6349225) mqtt_client: Error transport connect[0m
+[0;32mI (6349235) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6349235) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6349245) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6349255) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6364255) mqtts_example: Other event id:7[0m
+[0;31mE (6364255) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6364255) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6364255) mqtt_client: Error transport connect[0m
+[0;32mI (6364265) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6364265) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6364275) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6364285) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6379285) mqtts_example: Other event id:7[0m
+[0;31mE (6379285) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6379285) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6379285) mqtt_client: Error transport connect[0m
+[0;32mI (6379295) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6379295) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6379305) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6379315) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6394315) mqtts_example: Other event id:7[0m
+[0;31mE (6394315) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6394315) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6394315) mqtt_client: Error transport connect[0m
+[0;32mI (6394325) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6394325) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6394335) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6394345) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6409345) mqtts_example: Other event id:7[0m
+[0;31mE (6409345) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6409345) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6409345) mqtt_client: Error transport connect[0m
+[0;32mI (6409355) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6409355) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6409365) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6409375) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6424375) mqtts_example: Other event id:7[0m
+[0;31mE (6424375) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6424375) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6424375) mqtt_client: Error transport connect[0m
+[0;32mI (6424385) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6424385) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6424395) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6424405) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6439405) mqtts_example: Other event id:7[0m
+[0;31mE (6439405) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6439405) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6439405) mqtt_client: Error transport connect[0m
+[0;32mI (6439415) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6439415) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6439425) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6439435) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6454435) mqtts_example: Other event id:7[0m
+[0;31mE (6454435) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6454435) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6454435) mqtt_client: Error transport connect[0m
+[0;32mI (6454445) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6454445) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6454455) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6454465) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6469465) mqtts_example: Other event id:7[0m
+[0;31mE (6469465) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6469465) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6469465) mqtt_client: Error transport connect[0m
+[0;32mI (6469475) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6469475) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6469485) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6469495) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6484495) mqtts_example: Other event id:7[0m
+[0;31mE (6484495) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6484495) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6484495) mqtt_client: Error transport connect[0m
+[0;32mI (6484505) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6484505) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6484515) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6484525) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6499525) mqtts_example: Other event id:7[0m
+[0;31mE (6499525) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6499525) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6499525) mqtt_client: Error transport connect[0m
+[0;32mI (6499535) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6499535) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6499545) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6499555) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6514555) mqtts_example: Other event id:7[0m
+[0;31mE (6514555) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6514555) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6514555) mqtt_client: Error transport connect[0m
+[0;32mI (6514565) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6514565) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6514575) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6514585) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6529585) mqtts_example: Other event id:7[0m
+[0;31mE (6529585) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6529585) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6529585) mqtt_client: Error transport connect[0m
+[0;32mI (6529595) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6529595) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6529605) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6529615) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6544615) mqtts_example: Other event id:7[0m
+[0;31mE (6544615) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6544615) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6544615) mqtt_client: Error transport connect[0m
+[0;32mI (6544625) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6544625) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6544635) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6544645) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6559645) mqtts_example: Other event id:7[0m
+[0;31mE (6559645) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6559645) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6559645) mqtt_client: Error transport connect[0m
+[0;32mI (6559655) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6559655) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6559665) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6559675) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (6574675) mqtts_example: Other event id:7[0m
+[0;31mE (6574675) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;31mE (6574675) transport_base: Failed to open a new connection: 32772[0m
+[0;31mE (6574675) mqtt_client: Error transport connect[0m
+[0;32mI (6574685) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (6574685) mqtts_example: Last error reported from esp-tls: 0x8004[0m
+[0;32mI (6574695) mqtts_example: Last errno string (Success)[0m
+[0;32mI (6574705) mqtts_example: MQTT_EVENT_DISCONNECTED[0m

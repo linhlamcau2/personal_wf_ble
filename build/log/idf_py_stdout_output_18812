@@ -1,0 +1,439 @@
+�ښ�j%�(39) boot.esp32: SPI S�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 21 2024 09:56:26[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (77) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (92) boot:  3 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (99) boot: End of partition table[0m
+[0;32mI (103) boot: Defaulting to factory image[0m
+[0;32mI (108) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3694ch (223564) map[0m
+[0;32mI (193) esp_image: segment 1: paddr=00046974 vaddr=3ffbdb60 size=0518ch ( 20876) load[0m
+[0;32mI (201) esp_image: segment 2: paddr=0004bb08 vaddr=40080000 size=04510h ( 17680) load[0m
+[0;32mI (208) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=b85b8h (755128) map[0m
+[0;32mI (467) esp_image: segment 4: paddr=001085e0 vaddr=40084510 size=12914h ( 76052) load[0m
+[0;32mI (509) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (509) boot: Disabling RNG early entropy source...[0m
+[0;32mI (521) cpu_start: Multicore app[0m
+[0;32mI (530) cpu_start: Pro cpu start user code[0m
+[0;32mI (530) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (530) cpu_start: Application information:[0m
+[0;32mI (533) cpu_start: Project name:     onoff_client[0m
+[0;32mI (538) cpu_start: App version:      1[0m
+[0;32mI (542) cpu_start: Compile time:     Oct 29 2024 14:26:13[0m
+[0;32mI (549) cpu_start: ELF file SHA256:  afb2cd943...[0m
+[0;32mI (554) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (559) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (564) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (569) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (574) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (581) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (587) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (593) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (599) heap_init: At 3FFCB0A8 len 00014F58 (83 KiB): DRAM[0m
+[0;32mI (605) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (612) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (618) heap_init: At 40096E24 len 000091DC (36 KiB): IRAM[0m
+[0;32mI (626) spi_flash: detected chip: generic[0m
+[0;32mI (629) spi_flash: flash io: dio[0m
+[0;32mI (634) coexist: coex firmware version: d96c1e51f[0m
+[0;32mI (639) main_task: Started on CPU0[0m
+[0;32mI (649) main_task: Calling app_main()[0m
+[0;32mI (649) EXAMPLE: Initializing...[0m
+[0;32mI (649) gpio: GPIO[25]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (659) gpio: GPIO[26]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (669) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+use esp timer !!!
+[0;31mE (679) esp_timer: Task is already initialized[0m
+[0;32mI (679) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:3 [0m
+[0;32mI (729) BTDM_INIT: BT controller compile version [4012cfb][0m
+[0;32mI (739) BTDM_INIT: Bluetooth MAC: 30:ae:a4:98:71:1e[0m
+[0;32mI (739) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (1149) EXAMPLE_NVS: Open namespace done, name "mesh_example"[0m
+Bluetooth Mesh v1.1 commit: [10f7fdc1a9]
+[0;32mI (1259) EXAMPLE: BLE Mesh Provisioner initialized[0m
+[0;33mW (1269) BLE_MESH: AppKey exists, AppKeyIndex updated[0m
+[0;32mI (1269) EXAMPLE: ESP_BLE_MESH_PROVISIONER_PROV_ENABLE_COMP_EVT, err_code 0[0m
+[0;32mI (1269) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_LOCAL_APP_KEY_COMP_EVT, err_code 0[0m
+[0;32mI (1279) EXAMPLE: ESP_BLE_MESH_PROVISIONER_BIND_APP_KEY_TO_MODEL_COMP_EVT, err_code 0[0m
+[0;32mI (4529) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;31mE (4529) EXAMPLE: example_ble_mesh_generic_client_cb: Get node info failed[0m
+[0;32mI (4809) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0005, opcode: 0x8204[0m
+[0;31mE (4809) EXAMPLE: example_ble_mesh_generic_client_cb: Get node info failed[0m
+[0;32mI (8889) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;31mE (8889) EXAMPLE: example_ble_mesh_generic_client_cb: Get node info failed[0m
+[0;32mI (9289) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0005, opcode: 0x8204[0m
+[0;31mE (9289) EXAMPLE: example_ble_mesh_generic_client_cb: Get node info failed[0m
+[0;32mI (11319) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (11319) EXAMPLE_NVS: Store, data: 00 00 00 00 01 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (11319) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (11349) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (11349) EXAMPLE: example_ble_mesh_generic_client_cb: Get node info failed[0m
+[0;32mI (15889) EXAMPLE: ESP_BLE_MESH_PROVISIONER_RECV_UNPROV_ADV_PKT_EVT[0m
+[0;32mI (15889) EXAMPLE: address: 030402afa4c3, address type: 0, adv type: 0[0m
+[0;32mI (15889) EXAMPLE: device uuid: c3250bcbc188523ea1dd316afa1dca0a[0m
+[0;32mI (15899) EXAMPLE: oob info: 0, bearer: PB-GATT[0m
+[0;32mI (15909) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_UNPROV_DEV_COMP_EVT, err_code 0[0m
+[0;32mI (19389) EXAMPLE: PB-GATT link open[0m
+[0;32mI (21369) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (21379) EXAMPLE_NVS: Store, data: 00 00 00 00 02 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (21379) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (22399) BT_HCI: hci cmd send: disconnect: hdl 0x0, rsn:0x13[0m
+[0;33mW (22399) BT_APPL: gattc_conn_cb: if=3 st=0 id=3 rsn=0x16[0m
+[0;32mI (22399) EXAMPLE: node index: 0x0, unicast address: 0x05, element num: 3, netkey index: 0x00[0m
+[0;32mI (22409) EXAMPLE: device uuid: c3250bcbc188523ea1dd316afa1dca0a[0m
+[0;32mI (22419) EXAMPLE: PB-GATT link close, reason 0x16[0m
+[0;33mW (22429) BT_HCI: hcif disc complete: hdl 0x0, rsn 0x16[0m
+[0;32mI (22509) EXAMPLE: ESP_BLE_MESH_PROVISIONER_SET_NODE_NAME_COMP_EVT, err_code 0[0m
+[0;32mI (22509) EXAMPLE: Node 0 name is: NODE-0[0m
+[0;32mI (23839) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x00, addr: 0x0005, opcode: 0x8008[0m
+[0;32mI (23839) EXAMPLE: composition data 1102070033336900070000000602000002000300001003120412110200001102010000000301001003120412110200000000030100100312041211020000[0m
+[0;32mI (24339) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x0000[0m
+[0;32mI (24539) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x803d[0m
+[0;31mE (24539) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (24539) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0005, opcode: 0x8201[0m
+[0;31mE (24559) EXAMPLE: Send generic client message failed, opcode 0x8201[0m
+[0;33mW (31349) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (31359) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (31419) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (31419) EXAMPLE_NVS: Store, data: 00 00 00 00 04 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (31419) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (41379) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (41379) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (41429) BLE_MESH: Busy sending message to DST 0x0006[0m
+[0;32mI (41429) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0006, opcode: 0x8202[0m
+[0;31mE (41429) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (41449) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (41459) EXAMPLE_NVS: Store, data: 00 00 00 00 06 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (41459) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (41469) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (41479) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;31mE (41479) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (41489) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (41499) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;33mW (51409) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (51409) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (51499) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (51499) EXAMPLE_NVS: Store, data: 00 00 00 00 09 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (51499) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (51739) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (51739) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;33mW (61439) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (61449) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (61549) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (61549) EXAMPLE_NVS: Store, data: 00 00 00 00 0b 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (61549) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (61799) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (61799) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;33mW (71469) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (71469) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (71569) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (71569) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (71569) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (71599) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (71599) EXAMPLE_NVS: Store, data: 00 00 00 00 0d 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (71599) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (81499) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (81509) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (81609) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (81609) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (81609) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (81629) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (81639) EXAMPLE_NVS: Store, data: 00 00 00 00 0f 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (81639) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (91529) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (91529) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (91689) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (91689) EXAMPLE_NVS: Store, data: 00 00 00 00 11 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (91689) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (101559) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (101559) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;33mW (101669) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (101669) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;31mE (101669) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (101679) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (101689) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (101749) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (101749) EXAMPLE_NVS: Store, data: 00 00 00 00 14 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (101749) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (111589) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (111589) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;33mW (111719) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (111729) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;31mE (111729) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (111739) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (111749) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (111809) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (111809) EXAMPLE_NVS: Store, data: 00 00 00 00 17 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (111809) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (111849) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (111849) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;33mW (121699) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (121699) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (121889) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (121889) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (121899) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (121899) EXAMPLE_NVS: Store, data: 00 00 00 00 19 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (121909) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (131729) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (131729) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (131919) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (131919) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (131919) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (131949) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (131949) EXAMPLE_NVS: Store, data: 00 00 00 00 1b 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (131949) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (141759) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (141759) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (141949) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (141949) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (141949) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (141969) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (141979) EXAMPLE_NVS: Store, data: 00 00 00 00 1d 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (141979) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (151789) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (151789) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (152029) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (152029) EXAMPLE_NVS: Store, data: 00 00 00 00 1f 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (152029) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (161819) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (161819) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;33mW (161999) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (162009) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;31mE (162009) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (162019) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (162029) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (162089) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (162089) EXAMPLE_NVS: Store, data: 00 00 00 00 22 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (162089) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (171849) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (171849) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;33mW (172059) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (172069) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;31mE (172069) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (172079) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (172089) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (172149) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (172149) EXAMPLE_NVS: Store, data: 00 00 00 00 25 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (172149) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (172199) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (172199) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;33mW (181879) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (181879) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (182209) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (182209) EXAMPLE_NVS: Store, data: 00 00 00 00 27 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (182209) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (182299) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (182299) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;33mW (191909) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (191909) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (192219) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (192219) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (192219) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (192249) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (192249) EXAMPLE_NVS: Store, data: 00 00 00 00 29 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (192249) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (201939) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (201939) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (202249) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (202249) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (202249) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (202269) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (202279) EXAMPLE_NVS: Store, data: 00 00 00 00 2b 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (202279) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (211969) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (211969) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (212329) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (212329) EXAMPLE_NVS: Store, data: 00 00 00 00 2d 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (212329) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (221999) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (221999) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;33mW (222299) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (222309) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;31mE (222309) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (222319) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (222329) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (222389) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (222389) EXAMPLE_NVS: Store, data: 00 00 00 00 30 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (222389) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (232109) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (232109) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;33mW (232359) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (232369) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;31mE (232369) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (232379) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (232389) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (232449) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (232449) EXAMPLE_NVS: Store, data: 00 00 00 00 33 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (232449) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (232519) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (232519) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;33mW (242139) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (242139) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (242509) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (242509) EXAMPLE_NVS: Store, data: 00 00 00 00 35 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (242519) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (242529) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (242529) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;33mW (252169) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (252169) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (252519) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (252519) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (252519) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (252549) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (252549) EXAMPLE_NVS: Store, data: 00 00 00 00 37 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (252549) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (262199) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (262199) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (262549) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (262549) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (262549) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (262569) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (262579) EXAMPLE_NVS: Store, data: 00 00 00 00 39 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (262579) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (272229) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (272229) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (272629) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (272629) EXAMPLE_NVS: Store, data: 00 00 00 00 3b 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (272629) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (282259) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (282259) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;33mW (282599) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (282609) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;31mE (282609) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (282619) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (282629) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (282689) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (282689) EXAMPLE_NVS: Store, data: 00 00 00 00 3e 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (282689) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (292289) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (292289) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;33mW (292659) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (292669) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;31mE (292669) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (292679) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (292689) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (292749) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (292749) EXAMPLE_NVS: Store, data: 00 00 00 00 41 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (292749) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (292779) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (292779) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;33mW (302319) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (302329) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (302809) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (302809) EXAMPLE_NVS: Store, data: 00 00 00 00 43 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (302809) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (303019) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (303019) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;33mW (312349) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (312359) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (312819) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (312819) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (312819) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (312849) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (312849) EXAMPLE_NVS: Store, data: 00 00 00 00 45 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (312849) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (322379) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (322389) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (322849) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (322849) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (322849) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (322869) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (322879) EXAMPLE_NVS: Store, data: 00 00 00 00 47 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (322879) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (332409) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (332409) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (332929) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (332929) EXAMPLE_NVS: Store, data: 00 00 00 00 49 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (332929) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (342519) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (342519) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;33mW (342899) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (342909) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;31mE (342909) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (342919) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (342929) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (342989) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (342989) EXAMPLE_NVS: Store, data: 00 00 00 00 4c 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (342989) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (352549) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (352559) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;33mW (352959) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (352969) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;31mE (352969) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (352979) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (352989) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (353049) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (353049) EXAMPLE_NVS: Store, data: 00 00 00 00 4f 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (353059) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (353079) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (353079) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;33mW (362579) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (362589) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (363109) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (363109) EXAMPLE_NVS: Store, data: 00 00 00 00 51 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (363109) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (363199) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (363199) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;33mW (372609) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (372609) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (373119) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (373119) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (373119) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (373149) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (373149) EXAMPLE_NVS: Store, data: 00 00 00 00 53 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (373149) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (382639) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (382649) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (383149) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (383149) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (383149) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (383169) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (383179) EXAMPLE_NVS: Store, data: 00 00 00 00 55 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (383179) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (392669) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (392669) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (393229) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (393229) EXAMPLE_NVS: Store, data: 00 00 00 00 57 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (393229) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (402699) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (402709) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;33mW (403199) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (403209) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;31mE (403209) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (403219) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (403229) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (403289) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (403289) EXAMPLE_NVS: Store, data: 00 00 00 00 5a 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (403289) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (412729) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (412729) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;33mW (413259) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (413269) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;31mE (413269) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (413279) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (413289) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (413349) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (413359) EXAMPLE_NVS: Store, data: 00 00 00 00 5d 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (413359) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (413369) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (413379) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m

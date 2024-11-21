@@ -1,0 +1,816 @@
+� boot.esp32: SPI Speed    �ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Oct 21 2024 09:56:26[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (99) boot: End of partition table[0m
+[0;32mI (103) boot: Defaulting to factory image[0m
+[0;32mI (108) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=50504h (328964) map[0m
+[0;32mI (229) esp_image: segment 1: paddr=0006052c vaddr=3ffbdb60 size=060dch ( 24796) load[0m
+[0;32mI (238) esp_image: segment 2: paddr=00066610 vaddr=40080000 size=09a08h ( 39432) load[0m
+[0;32mI (254) esp_image: segment 3: paddr=00070020 vaddr=400d0020 size=12dd98h (1236376) map[0m
+[0;32mI (678) esp_image: segment 4: paddr=0019ddc0 vaddr=40089a08 size=14088h ( 82056) load[0m
+[0;32mI (725) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (725) boot: Disabling RNG early entropy source...[0m
+[0;32mI (737) cpu_start: Multicore app[0m
+[0;32mI (746) cpu_start: Pro cpu start user code[0m
+[0;32mI (746) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (746) cpu_start: Application information:[0m
+[0;32mI (749) cpu_start: Project name:     onoff_client[0m
+[0;32mI (754) cpu_start: App version:      1[0m
+[0;32mI (759) cpu_start: Compile time:     Oct 29 2024 14:26:13[0m
+[0;32mI (765) cpu_start: ELF file SHA256:  7c1eb5fc0...[0m
+[0;32mI (770) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (775) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (780) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (785) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (790) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (797) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (803) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (809) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (815) heap_init: At 3FFCFB18 len 000104E8 (65 KiB): DRAM[0m
+[0;32mI (821) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (828) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (834) heap_init: At 4009DA90 len 00002570 (9 KiB): IRAM[0m
+[0;32mI (842) spi_flash: detected chip: generic[0m
+[0;32mI (845) spi_flash: flash io: dio[0m
+[0;32mI (850) coexist: coex firmware version: d96c1e51f[0m
+[0;32mI (855) main_task: Started on CPU0[0m
+[0;32mI (865) main_task: Calling app_main()[0m
+[0;32mI (865) EXAMPLE: Initializing...[0m
+[0;32mI (865) gpio: GPIO[25]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (875) gpio: GPIO[26]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (885) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+use esp timer !!!
+[0;31mE (895) esp_timer: Task is already initialized[0m
+[0;32mI (895) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:3 [0m
+[0;32mI (975) BTDM_INIT: BT controller compile version [4012cfb][0m
+[0;32mI (975) BTDM_INIT: Bluetooth MAC: 30:ae:a4:98:71:1e[0m
+[0;32mI (985) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (1395) EXAMPLE_NVS: Open namespace done, name "mesh_example"[0m
+Bluetooth Mesh v1.1 commit: [10f7fdc1a9]
+[0;32mI (1505) EXAMPLE: BLE Mesh Provisioner initialized[0m
+[0;33mW (1515) BLE_MESH: AppKey exists, AppKeyIndex updated[0m
+[0;32mI (1515) EXAMPLE: ESP_BLE_MESH_PROVISIONER_PROV_ENABLE_COMP_EVT, err_code 0[0m
+[0;32mI (1525) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_LOCAL_APP_KEY_COMP_EVT, err_code 0[0m
+[0;32mI (1525) EXAMPLE: ESP_BLE_MESH_PROVISIONER_BIND_APP_KEY_TO_MODEL_COMP_EVT, err_code 0[0m
+I (1555) wifi:wifi driver task: 3ffdc8a4, prio:23, stack:6656, core=0
+I (1575) wifi:wifi firmware version: 3e0076f
+I (1575) wifi:wifi certification version: v7.0
+I (1575) wifi:config NVS flash: enabled
+I (1575) wifi:config nano formating: disabled
+I (1575) wifi:Init data frame dynamic rx buffer num: 32
+I (1585) wifi:Init static rx mgmt buffer num: 5
+I (1585) wifi:Init management short buffer num: 32
+I (1595) wifi:Init dynamic tx buffer num: 32
+I (1595) wifi:Init static rx buffer size: 1600
+I (1595) wifi:Init static rx buffer num: 10
+I (1605) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1635) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+addr: 0x0007
+[0;31mE (1635) EXAMPLE: Node not found for addr: 0x0007[0m
+[0;32mI (1645) wifi_init: rx ba win: 6[0m
+[0;32mI (1645) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1645) wifi_init: udp mbox: 6[0m
+[0;32mI (1655) wifi_init: tcp mbox: 6[0m
+[0;32mI (1655) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1665) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1665) wifi_init: tcp mss: 1440[0m
+[0;32mI (1665) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1675) wifi_init: WiFi RX IRAM OP enabled[0m
+I (1685) wifi:mode : sta (30:ae:a4:98:71:1c)
+I (1685) wifi:enable tsf
+[0;32mI (1685) EXAMPLE: wifi_init_sta finished.[0m
+I (1815) wifi:new:<9,0>, old:<1,0>, ap:<255,255>, sta:<9,0>, prof:1
+I (1815) wifi:state: init -> auth (b0)
+I (1825) wifi:state: auth -> assoc (0)
+I (1845) wifi:state: assoc -> run (10)
+[0;32mI (5875) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+addr: 0x0007
+[0;31mE (5875) EXAMPLE: Node not found for addr: 0x0007[0m
+[0;32mI (6075) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0005, opcode: 0x8204[0m
+addr: 0x0005
+[0;31mE (6075) EXAMPLE: Node not found for addr: 0x0005[0m
+I (11845) wifi:state: run -> init (cc00)
+I (11845) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy
+
+I (11855) wifi:new:<9,0>, old:<9,0>, ap:<255,255>, sta:<9,0>, prof:1
+[0;32mI (11855) EXAMPLE: retry to connect to the AP[0m
+[0;32mI (11855) EXAMPLE: connect to the AP fail[0m
+[0;32mI (13255) EXAMPLE: ESP_BLE_MESH_PROVISIONER_RECV_UNPROV_ADV_PKT_EVT[0m
+[0;32mI (13255) EXAMPLE: address: 030402afa4c3, address type: 0, adv type: 0[0m
+[0;32mI (13265) EXAMPLE: device uuid: c3250bcbc188523ea1dd316afa1dca0a[0m
+[0;32mI (13265) EXAMPLE: oob info: 0, bearer: PB-GATT[0m
+[0;32mI (13285) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_UNPROV_DEV_COMP_EVT, err_code 0[0m
+[0;33mW (13615) BT_HCI: hcif disc complete: hdl 0x0, rsn 0x3e[0m
+I (16685) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy
+
+[0;32mI (16695) EXAMPLE: retry to connect to the AP[0m
+[0;32mI (16695) EXAMPLE: connect to the AP fail[0m
+I (16705) wifi:new:<9,0>, old:<9,0>, ap:<255,255>, sta:<9,0>, prof:1
+I (16705) wifi:state: init -> auth (b0)
+I (16715) wifi:state: auth -> assoc (0)
+I (16715) wifi:state: assoc -> run (10)
+I (16755) wifi:connected with Turtlee, aid = 2, channel 9, BW20, bssid = 4e:9a:51:02:11:1a
+I (16755) wifi:security: WPA2-PSK, phy: bgn, rssi: -84
+I (16755) wifi:pm start, type: 1
+
+I (16755) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (16765) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (17445) EXAMPLE: PB-GATT link open[0m
+[0;32mI (17775) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (17775) EXAMPLE: got ip:172.20.10.3[0m
+[0;32mI (17775) EXAMPLE: connected to ap SSID:Turtlee password:11111111[0m
+[0;32mI (17785) mqtts_example: [APP] Free memory: 108628 bytes[0m
+[0;32mI (17785) mqtts_example: Other event id:7[0m
+[0;32mI (17805) main_task: Returned from app_main()[0m
+I (17815) wifi:<ba-add>idx:0 (ifx:0, 4e:9a:51:02:11:1a), tid:0, ssn:2, winSize:64
+I (18815) wifi:<ba-del>idx:0, tid:0
+I (18815) wifi:<ba-add>idx:0 (ifx:0, 4e:9a:51:02:11:1a), tid:0, ssn:4, winSize:64
+[0;32mI (19985) mqtts_example: MQTT_EVENT_CONNECTED[0m
+[0;32mI (19985) mqtts_example: sent subscribe successful, msg_id=10831[0m
+[0;32mI (20045) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=10831[0m
+[0;33mW (20645) BT_HCI: hci cmd send: disconnect: hdl 0x0, rsn:0x13[0m
+[0;33mW (20645) BT_APPL: gattc_conn_cb: if=3 st=0 id=3 rsn=0x16[0m
+[0;32mI (20655) EXAMPLE: node index: 0x0, unicast address: 0x05, element num: 3, netkey index: 0x00[0m
+[0;32mI (20655) EXAMPLE: device uuid: c3250bcbc188523ea1dd316afa1dca0a[0m
+[0;32mI (20665) EXAMPLE: PB-GATT link close, reason 0x16[0m
+[0;32mI (20695) EXAMPLE: ESP_BLE_MESH_PROVISIONER_SET_NODE_NAME_COMP_EVT, err_code 0[0m
+[0;32mI (20705) EXAMPLE: Node 0 name is: NODE-0[0m
+[0;33mW (20715) BT_HCI: hcif disc complete: hdl 0x0, rsn 0x16[0m
+[0;32mI (22095) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x00, addr: 0x0005, opcode: 0x8008[0m
+[0;32mI (22095) EXAMPLE: composition data 1102070033336900070000000602000002000300001003120412110200001102010000000301001003120412110200000000030100100312041211020000[0m
+[0;32mI (23945) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x0000[0m
+[0;32mI (24205) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (24415) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x00, addr: 0x0005, opcode: 0x8201[0m
+addr: 0x0005
+[0;32mI (24425) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0005
+ get addr send: 0x0005
+[0;32mI (24435) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_GET onoff: 0x00[0m
+set 1 addr send: 0x0005
+common1.addr=0x0005[0;32mI (24675) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+addr: 0x0005
+[0;32mI (24685) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0005
+set addr send: 0x0005
+[0;32mI (24695) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (27925) mqtts_example: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/17
+DATA={"method":"setValue","params":{"onoff":0,"addr":"0x0007"}}
+HEX: 0x0007
+Integer value: 0
+send -> 0x0007,0addr send: 0x0007addr send 2: 0x0007[0;32mI (27955) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (27955) EXAMPLE_NVS: Store, data: 00 00 00 00 02 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (27965) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;31mE (27975) BLE_MESH: Busy sending message to DST 0x0007[0m
+[0;32mI (27975) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0007, opcode: 0x8201[0m
+[0;31mE (27985) EXAMPLE: Send generic client message failed, opcode 0x8201[0m
+[0;33mW (37965) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (37965) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (37975) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (48015) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (48015) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (48025) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (58065) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (58065) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (58075) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (68115) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (68115) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (68125) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (78165) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (78165) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (78175) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (88225) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (88225) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (88235) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (98275) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (98275) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (98285) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (108325) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (108325) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (108335) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (118375) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (118375) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (118385) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (128425) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (128425) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (128435) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (138475) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (138475) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (138485) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (148535) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (148535) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (148545) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (158595) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (158595) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (158605) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (168645) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (168645) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (168655) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (178695) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (178695) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (178705) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (188745) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (188745) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (188755) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (198795) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (198795) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (198805) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (208855) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (208855) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (208865) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (218905) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (218905) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (218915) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (228955) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (228955) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (228965) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (239015) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (239015) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (239025) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;32mI (244705) mqtts_example: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/18
+DATA={"method":"setValue","params":{"onoff":0,"addr":"0x0006"}}
+HEX: 0x0006
+Integer value: 0
+send -> 0x0006,0addr send: 0x0006addr send 2: 0x0006[0;32mI (244765) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (244765) EXAMPLE_NVS: Store, data: 00 00 00 00 18 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (244775) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;31mE (244785) BLE_MESH: Busy sending message to DST 0x0006[0m
+[0;32mI (244785) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0006, opcode: 0x8201[0m
+[0;31mE (244795) EXAMPLE: Send generic client message failed, opcode 0x8201[0m
+[0;33mW (249065) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (249065) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (249075) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (254775) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (254785) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (254785) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (259115) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (259115) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (259125) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (264835) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (264835) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (264845) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (269175) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (269175) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (269185) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (274895) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (274895) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (274905) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (279225) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (279225) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (279235) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (284955) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (284955) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (284965) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (289365) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (289365) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (289375) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (295005) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (295005) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (295015) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (299415) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (299415) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (299425) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (305055) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (305055) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (305065) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (309475) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (309475) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (309485) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (315105) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (315105) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (315115) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (319525) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (319525) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (319535) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (325155) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (325155) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (325165) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (329585) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (329585) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (329595) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (335215) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (335215) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (335225) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (339635) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (339635) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (339645) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (345265) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (345265) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (345275) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (349685) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (349685) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (349695) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (355315) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (355315) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (355325) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (359735) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (359735) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (359745) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;33mW (365365) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (365365) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (365375) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (369785) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (369785) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (369795) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;32mI (373355) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (373365) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+set addr send: 0x0007
+[0;32mI (373375) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;33mW (375415) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (375415) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (375425) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (385465) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (385465) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (385475) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (395525) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (395525) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (395535) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (405585) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (405585) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (405595) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (415635) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (415635) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (415645) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (425695) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (425695) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (425705) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (435745) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (435745) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (435755) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (445805) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (445805) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (445815) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (455855) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (455855) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (455865) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (465905) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (465905) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (465915) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (476055) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (476055) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (476065) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (486105) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (486105) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (486115) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (496155) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (496165) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (496165) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (506215) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (506215) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (506225) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (516275) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (516275) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (516285) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (526325) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (526325) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (526335) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (536375) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (536375) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (536385) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (546425) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (546425) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (546435) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (556475) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (556475) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (556485) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (566535) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (566535) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (566545) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (576585) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (576585) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (576595) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;32mI (577635) EXAMPLE: ESP_BLE_MESH_PROVISIONER_RECV_UNPROV_ADV_PKT_EVT[0m
+[0;32mI (577635) EXAMPLE: address: 270202c06ca0, address type: 0, adv type: 0[0m
+[0;32mI (577635) EXAMPLE: device uuid: 626362f2d66e1136a718354cbd67c391[0m
+[0;32mI (577645) EXAMPLE: oob info: 0, bearer: PB-GATT[0m
+[0;32mI (577655) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_UNPROV_DEV_COMP_EVT, err_code 0[0m
+[0;33mW (586635) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (586635) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (586645) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (596695) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (596695) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (596705) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (606755) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (606755) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (606755) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (607665) BT_APPL: gattc_conn_cb: if=3 st=0 id=3 rsn=0x100[0m
+[0;33mW (616815) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (616815) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (616825) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (626875) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (626875) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (626885) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (636935) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (636935) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (636945) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (646995) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (647005) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (647005) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (651575) BT_HCI: hcif disc complete: hdl 0x0, rsn 0x3e[0m
+[0;33mW (652615) BT_HCI: hcif disc complete: hdl 0x0, rsn 0x3e[0m
+[0;33mW (657055) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (657055) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (657065) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (658405) BT_HCI: hcif disc complete: hdl 0x0, rsn 0x3e[0m
+[0;33mW (659415) BT_APPL: gattc_conn_cb: if=3 st=0 id=3 rsn=0x100[0m
+[0;33mW (659755) BLE_MESH: Device in queue not support PB-ADV[0m
+[0;32mI (659755) EXAMPLE: ESP_BLE_MESH_PROVISIONER_RECV_UNPROV_ADV_PKT_EVT[0m
+[0;32mI (659755) EXAMPLE: address: 270202c06ca0, address type: 0, adv type: 3[0m
+[0;32mI (659765) EXAMPLE: device uuid: 626362f2d66e1136a718354cbd67c391[0m
+[0;32mI (659775) EXAMPLE: oob info: 0, bearer: PB-ADV[0m
+[0;33mW (659775) BLE_MESH: Add device with only bearer updated[0m
+[0;32mI (659795) EXAMPLE: PB-ADV link open[0m
+[0;32mI (659795) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_UNPROV_DEV_COMP_EVT, err_code 0[0m
+[0;33mW (667115) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (667115) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (667125) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (677175) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (677175) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (677185) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (687225) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (687225) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (687235) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (690115) BLE_MESH: Timeout, giving up transaction[0m
+[0;32mI (690315) EXAMPLE: PB-ADV link close, reason 0x01[0m
+[0;33mW (697275) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (697275) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (697285) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (707335) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (707335) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (707345) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (717385) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (717385) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (717395) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (727435) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (727435) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (727445) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;33mW (727495) BT_APPL: gattc_conn_cb: if=3 st=0 id=3 rsn=0x100[0m
+[0;33mW (737495) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (737495) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (737505) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006
+[0;32mI (737845) EXAMPLE: PB-ADV link open[0m
+[0;33mW (747545) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (747555) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (747555) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+to set addr send: 0x0006
+common2.addr=0x0006

@@ -1,0 +1,566 @@
+ښ�j%�(39) boot.esp32�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Oct 21 2024 09:56:26[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (99) boot: End of partition table[0m
+[0;32mI (103) boot: Defaulting to factory image[0m
+[0;32mI (108) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=506b4h (329396) map[0m
+[0;32mI (229) esp_image: segment 1: paddr=000606dc vaddr=3ffbdb60 size=060dch ( 24796) load[0m
+[0;32mI (239) esp_image: segment 2: paddr=000667c0 vaddr=40080000 size=09858h ( 39000) load[0m
+[0;32mI (254) esp_image: segment 3: paddr=00070020 vaddr=400d0020 size=12dd90h (1236368) map[0m
+[0;32mI (678) esp_image: segment 4: paddr=0019ddb8 vaddr=40089858 size=14238h ( 82488) load[0m
+[0;32mI (725) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (726) boot: Disabling RNG early entropy source...[0m
+[0;32mI (737) cpu_start: Multicore app[0m
+[0;32mI (746) cpu_start: Pro cpu start user code[0m
+[0;32mI (746) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (746) cpu_start: Application information:[0m
+[0;32mI (749) cpu_start: Project name:     onoff_client[0m
+[0;32mI (755) cpu_start: App version:      1[0m
+[0;32mI (759) cpu_start: Compile time:     Oct 29 2024 14:26:13[0m
+[0;32mI (765) cpu_start: ELF file SHA256:  804048100...[0m
+[0;32mI (770) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (776) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (780) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (785) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (790) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (797) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (803) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (809) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (816) heap_init: At 3FFCFB18 len 000104E8 (65 KiB): DRAM[0m
+[0;32mI (822) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (828) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (835) heap_init: At 4009DA90 len 00002570 (9 KiB): IRAM[0m
+[0;32mI (842) spi_flash: detected chip: generic[0m
+[0;32mI (845) spi_flash: flash io: dio[0m
+[0;32mI (850) coexist: coex firmware version: d96c1e51f[0m
+[0;32mI (855) main_task: Started on CPU0[0m
+[0;32mI (865) main_task: Calling app_main()[0m
+[0;32mI (865) EXAMPLE: Initializing...[0m
+[0;32mI (865) gpio: GPIO[25]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (875) gpio: GPIO[26]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (885) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+use esp timer !!!
+[0;31mE (895) esp_timer: Task is already initialized[0m
+[0;32mI (895) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:3 [0m
+[0;32mI (975) BTDM_INIT: BT controller compile version [4012cfb][0m
+[0;32mI (975) BTDM_INIT: Bluetooth MAC: 30:ae:a4:98:71:1e[0m
+[0;32mI (975) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (1375) EXAMPLE_NVS: Open namespace done, name "mesh_example"[0m
+Bluetooth Mesh v1.1 commit: [10f7fdc1a9]
+[0;32mI (1495) EXAMPLE: BLE Mesh Provisioner initialized[0m
+[0;33mW (1505) BLE_MESH: AppKey exists, AppKeyIndex updated[0m
+[0;32mI (1505) EXAMPLE: ESP_BLE_MESH_PROVISIONER_PROV_ENABLE_COMP_EVT, err_code 0[0m
+[0;32mI (1505) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_LOCAL_APP_KEY_COMP_EVT, err_code 0[0m
+[0;32mI (1515) EXAMPLE: ESP_BLE_MESH_PROVISIONER_BIND_APP_KEY_TO_MODEL_COMP_EVT, err_code 0[0m
+I (1535) wifi:wifi driver task: 3ffdc8a0, prio:23, stack:6656, core=0
+I (1555) wifi:wifi firmware version: 3e0076f
+I (1555) wifi:wifi certification version: v7.0
+I (1555) wifi:config NVS flash: enabled
+I (1555) wifi:config nano formating: disabled
+I (1555) wifi:Init data frame dynamic rx buffer num: 32
+I (1565) wifi:Init static rx mgmt buffer num: 5
+I (1565) wifi:Init management short buffer num: 32
+I (1565) wifi:Init dynamic tx buffer num: 32
+I (1575) wifi:Init static rx buffer size: 1600
+I (1575) wifi:Init static rx buffer num: 10
+I (1585) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1585) wifi_init: rx ba win: 6[0m
+[0;32mI (1585) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1595) wifi_init: udp mbox: 6[0m
+[0;32mI (1595) wifi_init: tcp mbox: 6[0m
+[0;32mI (1605) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1605) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1605) wifi_init: tcp mss: 1440[0m
+[0;32mI (1615) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1615) wifi_init: WiFi RX IRAM OP enabled[0m
+I (1635) wifi:mode : sta (30:ae:a4:98:71:1c)
+I (1635) wifi:enable tsf
+[0;32mI (1635) EXAMPLE: wifi_init_sta finished.[0m
+I (1645) wifi:new:<9,0>, old:<1,0>, ap:<255,255>, sta:<9,0>, prof:1
+I (1645) wifi:state: init -> auth (b0)
+I (1655) wifi:state: auth -> assoc (0)
+I (1705) wifi:state: assoc -> run (10)
+I (1745) wifi:connected with Turtlee, aid = 1, channel 9, BW20, bssid = 62:f2:24:fb:4b:ee
+I (1755) wifi:security: WPA2-PSK, phy: bgn, rssi: -92
+I (1755) wifi:pm start, type: 1
+
+I (1755) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (1795) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (2045) EXAMPLE: ESP_BLE_MESH_PROVISIONER_RECV_UNPROV_ADV_PKT_EVT[0m
+[0;32mI (2045) EXAMPLE: address: 030402afa4c3, address type: 0, adv type: 0[0m
+[0;32mI (2045) EXAMPLE: device uuid: c3250bcbc188523ea1dd316afa1dca0a[0m
+[0;32mI (2055) EXAMPLE: oob info: 0, bearer: PB-GATT[0m
+[0;32mI (2075) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_UNPROV_DEV_COMP_EVT, err_code 0[0m
+[0;32mI (5285) EXAMPLE: PB-GATT link open[0m
+[0;32mI (6265) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (6265) EXAMPLE: got ip:172.20.10.3[0m
+[0;32mI (6265) EXAMPLE: connected to ap SSID:Turtlee password:11111111[0m
+[0;32mI (6275) mqtts_example: [APP] Free memory: 108348 bytes[0m
+[0;32mI (6275) mqtts_example: Other event id:7[0m
+[0;32mI (6295) main_task: Returned from app_main()[0m
+I (6305) wifi:<ba-add>idx:0 (ifx:0, 62:f2:24:fb:4b:ee), tid:0, ssn:2, winSize:64
+[0;32mI (6415) mqtts_example: MQTT_EVENT_CONNECTED[0m
+[0;32mI (6425) mqtts_example: sent subscribe successful, msg_id=16623[0m
+[0;32mI (6435) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=16623[0m
+[0;33mW (8455) BT_HCI: hci cmd send: disconnect: hdl 0x0, rsn:0x13[0m
+[0;33mW (8455) BT_APPL: gattc_conn_cb: if=3 st=0 id=3 rsn=0x16[0m
+[0;32mI (8465) EXAMPLE: node index: 0x0, unicast address: 0x05, element num: 3, netkey index: 0x00[0m
+[0;32mI (8465) EXAMPLE: device uuid: c3250bcbc188523ea1dd316afa1dca0a[0m
+[0;32mI (8475) EXAMPLE: PB-GATT link close, reason 0x16[0m
+[0;33mW (8485) BT_HCI: hcif disc complete: hdl 0x0, rsn 0x16[0m
+[0;32mI (8515) EXAMPLE: ESP_BLE_MESH_PROVISIONER_SET_NODE_NAME_COMP_EVT, err_code 0[0m
+[0;32mI (8525) EXAMPLE: Node 0 name is: NODE-0[0m
+[0;32mI (10025) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x00, addr: 0x0005, opcode: 0x8008[0m
+[0;32mI (10025) EXAMPLE: composition data 1102070033336900070000000602000002000300001003120412110200001102010000000301001003120412110200000000030100100312041211020000[0m
+[0;32mI (10505) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x0000[0m
+[0;32mI (10505) EXAMPLE: Sent bind app key request to element 0x0005[0m
+[0;32mI (10725) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (10725) EXAMPLE: Bind app key success for element 0x0005[0m
+[0;32mI (10725) EXAMPLE: Sent bind app key request to element 0x0006[0m
+[0;32mI (10955) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (10955) EXAMPLE: Bind app key success for element 0x0005[0m
+[0;32mI (10965) EXAMPLE: Sent bind app key request to element 0x0007[0m
+[0;32mI (11225) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x803d[0m
+[0;32mI (11225) EXAMPLE: Bind app key success for element 0x0005[0m
+[0;32mI (11225) EXAMPLE: All elements have been bound with app key.[0m
+[0;32mI (93245) mqtts_example: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/20
+DATA={"method":"setValue","params":{"onoff":1,"addr":"0x0007"}}
+HEX: 0x0007
+Integer value: 1
+send -> 0x0007,1addr send: 0x0007addr send 2: 0x0007[0;32mI (93295) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (93295) EXAMPLE_NVS: Store, data: 00 00 00 00 01 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (93305) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;31mE (93305) BLE_MESH: Busy sending message to DST 0x0007[0m
+[0;32mI (93315) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0007, opcode: 0x8201[0m
+[0;31mE (93325) EXAMPLE: Send generic client message failed, opcode 0x8201[0m
+[0;32mI (93505) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (93515) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+set addr send: 0x0007
+[0;32mI (93525) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (104715) mqtts_example: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/21
+DATA={"method":"setValue","params":{"onoff":0,"addr":"0x0007"}}
+HEX: 0x0007
+Integer value: 0
+send -> 0x0007,0addr send: 0x0007addr send 2: 0x0007[0;32mI (104785) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (104785) EXAMPLE_NVS: Store, data: 00 00 00 00 02 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (104795) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;31mE (104795) BLE_MESH: Busy sending message to DST 0x0007[0m
+[0;32mI (104805) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0007, opcode: 0x8201[0m
+[0;31mE (104815) EXAMPLE: Send generic client message failed, opcode 0x8201[0m
+[0;32mI (105085) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (105085) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+set addr send: 0x0007
+[0;32mI (105095) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (118875) mqtts_example: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/22
+DATA={"method":"setValue","params":{"onoff":0,"addr":"0x0006"}}
+HEX: 0x0006
+Integer value: 0
+send -> 0x0006,0addr send: 0x0006addr send 2: 0x0006[0;32mI (118935) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (118935) EXAMPLE_NVS: Store, data: 00 00 00 00 03 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (118945) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;31mE (118945) BLE_MESH: Busy sending message to DST 0x0006[0m
+[0;32mI (118955) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0006, opcode: 0x8201[0m
+[0;31mE (118965) EXAMPLE: Send generic client message failed, opcode 0x8201[0m
+[0;32mI (119075) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (119075) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+set addr send: 0x0006
+[0;32mI (119085) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (119875) mqtts_example: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/23
+DATA={"method":"setValue","params":{"onoff":1,"addr":"0x0006"}}
+HEX: 0x0006
+Integer value: 1
+send -> 0x0006,1addr send: 0x0006addr send 2: 0x0006[0;32mI (119905) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (119905) EXAMPLE_NVS: Store, data: 00 00 00 00 04 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (119915) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;31mE (119955) BLE_MESH: Busy sending message to DST 0x0006[0m
+[0;32mI (119955) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0006, opcode: 0x8201[0m
+[0;31mE (119965) EXAMPLE: Send generic client message failed, opcode 0x8201[0m
+[0;32mI (120085) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (120085) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+set addr send: 0x0006
+[0;32mI (120095) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (135545) mqtts_example: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/24
+DATA={"method":"setValue","params":{"onoff":0,"addr":"0x0005"}}
+HEX: 0x0005
+Integer value: 0
+send -> 0x0005,0addr send: 0x0005addr send 2: 0x0005[0;32mI (135705) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (135705) EXAMPLE_NVS: Store, data: 00 00 00 00 05 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (135715) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;31mE (135725) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (135725) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0005, opcode: 0x8201[0m
+[0;31mE (135735) EXAMPLE: Send generic client message failed, opcode 0x8201[0m
+[0;32mI (135965) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+addr: 0x0005
+[0;32mI (135975) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0005
+set addr send: 0x0005
+[0;32mI (135985) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (136775) mqtts_example: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/25
+DATA={"method":"setValue","params":{"onoff":1,"addr":"0x0005"}}
+HEX: 0x0005
+Integer value: 1
+send -> 0x0005,1addr send: 0x0005addr send 2: 0x0005[0;32mI (136825) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (136825) EXAMPLE_NVS: Store, data: 00 00 00 00 06 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (136835) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;31mE (136845) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (136845) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0005, opcode: 0x8201[0m
+[0;31mE (136865) EXAMPLE: Send generic client message failed, opcode 0x8201[0m
+[0;32mI (136885) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+addr: 0x0005
+[0;32mI (136895) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0005
+set addr send: 0x0005
+[0;32mI (136905) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (173845) mqtts_example: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/26
+DATA={"method":"setValue","params":{"onoff":1,"addr":"0x0006"}}
+HEX: 0x0006
+Integer value: 1
+send -> 0x0006,1addr send: 0x0006addr send 2: 0x0006[0;32mI (173905) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (173905) EXAMPLE_NVS: Store, data: 00 00 00 00 07 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (173915) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;31mE (173915) BLE_MESH: Busy sending message to DST 0x0006[0m
+[0;32mI (173925) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0006, opcode: 0x8201[0m
+[0;31mE (173935) EXAMPLE: Send generic client message failed, opcode 0x8201[0m
+[0;32mI (174045) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (174045) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+set addr send: 0x0006
+[0;32mI (174055) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (181415) mqtts_example: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/27
+DATA={"method":"setValue","params":{"onoff":0,"addr":"0x0006"}}
+HEX: 0x0006
+Integer value: 0
+send -> 0x0006,0addr send: 0x0006addr send 2: 0x0006[0;32mI (181485) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (181485) EXAMPLE_NVS: Store, data: 00 00 00 00 08 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (181495) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;31mE (181495) BLE_MESH: Busy sending message to DST 0x0006[0m
+[0;32mI (181505) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0006, opcode: 0x8201[0m
+[0;31mE (181515) EXAMPLE: Send generic client message failed, opcode 0x8201[0m
+[0;32mI (181735) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (181735) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+set addr send: 0x0006
+[0;32mI (181745) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (182855) mqtts_example: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/28
+DATA={"method":"setValue","params":{"onoff":1,"addr":"0x0006"}}
+HEX: 0x0006
+Integer value: 1
+send -> 0x0006,1addr send: 0x0006addr send 2: 0x0006[0;32mI (182915) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (182915) EXAMPLE_NVS: Store, data: 00 00 00 00 09 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (182925) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;31mE (182925) BLE_MESH: Busy sending message to DST 0x0006[0m
+[0;32mI (182935) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0006, opcode: 0x8201[0m
+[0;31mE (182945) EXAMPLE: Send generic client message failed, opcode 0x8201[0m
+[0;32mI (183135) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (183145) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+set addr send: 0x0006
+[0;32mI (183155) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (185215) mqtts_example: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/29
+DATA={"method":"setValue","params":{"onoff":0,"addr":"0x0005"}}
+HEX: 0x0005
+Integer value: 0
+send -> 0x0005,0addr send: 0x0005addr send 2: 0x0005[0;32mI (185275) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (185275) EXAMPLE_NVS: Store, data: 00 00 00 00 0a 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (185285) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;31mE (185295) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (185295) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0005, opcode: 0x8201[0m
+[0;31mE (185305) EXAMPLE: Send generic client message failed, opcode 0x8201[0m
+[0;32mI (185505) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+addr: 0x0005
+[0;32mI (185505) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0005
+set addr send: 0x0005
+[0;32mI (185515) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (186145) mqtts_example: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/30
+DATA={"method":"setValue","params":{"onoff":1,"addr":"0x0005"}}
+HEX: 0x0005
+Integer value: 1
+send -> 0x0005,1addr send: 0x0005addr send 2: 0x0005[0;32mI (186205) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (186205) EXAMPLE_NVS: Store, data: 00 00 00 00 0b 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (186215) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;31mE (186225) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (186225) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0005, opcode: 0x8201[0m
+[0;31mE (186235) EXAMPLE: Send generic client message failed, opcode 0x8201[0m
+[0;33mW (196225) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (196225) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+addr: 0x0005
+[0;32mI (196235) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0005
+to set addr send: 0x0005
+common2.addr=0x0005
+[0;32mI (196525) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+addr: 0x0005
+[0;32mI (196525) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0005
+set addr send: 0x0005
+[0;32mI (196535) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (229955) mqtts_example: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/31
+DATA={"method":"setValue","params":{"onoff":1,"addr":"0x0007"}}
+HEX: 0x0007
+Integer value: 1
+send -> 0x0007,1addr send: 0x0007addr send 2: 0x0007[0;32mI (229985) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (229985) EXAMPLE_NVS: Store, data: 00 00 00 00 0d 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (229995) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;31mE (230035) BLE_MESH: Busy sending message to DST 0x0007[0m
+[0;32mI (230035) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0007, opcode: 0x8201[0m
+[0;31mE (230045) EXAMPLE: Send generic client message failed, opcode 0x8201[0m
+[0;32mI (230255) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (230255) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+set addr send: 0x0007
+[0;32mI (230265) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (233125) mqtts_example: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/32
+DATA={"method":"setValue","params":{"onoff":0,"addr":"0x0006"}}
+HEX: 0x0006
+Integer value: 0
+send -> 0x0006,0addr send: 0x0006addr send 2: 0x0006[0;32mI (233185) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (233185) EXAMPLE_NVS: Store, data: 00 00 00 00 0e 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (233195) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;31mE (233195) BLE_MESH: Busy sending message to DST 0x0006[0m
+[0;32mI (233205) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0006, opcode: 0x8201[0m
+[0;31mE (233215) EXAMPLE: Send generic client message failed, opcode 0x8201[0m
+[0;32mI (233515) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (233515) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+set addr send: 0x0006
+[0;32mI (233525) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (236915) mqtts_example: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/33
+DATA={"method":"setValue","params":{"onoff":1,"addr":"0x0006"}}
+HEX: 0x0006
+Integer value: 1
+send -> 0x0006,1addr send: 0x0006addr send 2: 0x0006[0;32mI (236965) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (236965) EXAMPLE_NVS: Store, data: 00 00 00 00 0f 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (236975) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;31mE (236975) BLE_MESH: Busy sending message to DST 0x0006[0m
+[0;32mI (236985) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0006, opcode: 0x8201[0m
+[0;31mE (236995) EXAMPLE: Send generic client message failed, opcode 0x8201[0m
+[0;32mI (237035) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (237035) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+set addr send: 0x0006
+[0;32mI (237045) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (316685) mqtts_example: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/34
+DATA={"method":"setValue","params":{"onoff":0,"addr":"0x0005"}}
+HEX: 0x0005
+Integer value: 0
+send -> 0x0005,0addr send: 0x0005addr send 2: 0x0005[0;32mI (316745) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (316745) EXAMPLE_NVS: Store, data: 00 00 00 00 10 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (316745) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;31mE (316755) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (316765) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0005, opcode: 0x8201[0m
+[0;31mE (316775) EXAMPLE: Send generic client message failed, opcode 0x8201[0m
+[0;32mI (316985) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+addr: 0x0005
+[0;32mI (316985) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0005
+set addr send: 0x0005
+[0;32mI (316995) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (318635) mqtts_example: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/35
+DATA={"method":"setValue","params":{"onoff":1,"addr":"0x0005"}}
+HEX: 0x0005
+Integer value: 1
+send -> 0x0005,1addr send: 0x0005addr send 2: 0x0005[0;32mI (318685) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (318685) EXAMPLE_NVS: Store, data: 00 00 00 00 11 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (318685) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;31mE (318695) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (318705) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0005, opcode: 0x8201[0m
+[0;31mE (318715) EXAMPLE: Send generic client message failed, opcode 0x8201[0m
+[0;32mI (318955) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+addr: 0x0005
+[0;32mI (318965) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0005
+set addr send: 0x0005
+[0;32mI (318975) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (319755) mqtts_example: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/36
+DATA={"method":"setValue","params":{"onoff":0,"addr":"0x0006"}}
+HEX: 0x0006
+Integer value: 0
+send -> 0x0006,0addr send: 0x0006addr send 2: 0x0006[0;32mI (319815) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (319815) EXAMPLE_NVS: Store, data: 00 00 00 00 12 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (319825) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;31mE (319825) BLE_MESH: Busy sending message to DST 0x0006[0m
+[0;32mI (319835) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0006, opcode: 0x8201[0m
+[0;31mE (319855) EXAMPLE: Send generic client message failed, opcode 0x8201[0m
+[0;32mI (319885) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (319885) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+set addr send: 0x0006
+[0;32mI (319895) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (320475) mqtts_example: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/37
+DATA={"method":"setValue","params":{"onoff":1,"addr":"0x0006"}}
+HEX: 0x0006
+Integer value: 1
+send -> 0x0006,1addr send: 0x0006addr send 2: 0x0006[0;32mI (320505) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (320505) EXAMPLE_NVS: Store, data: 00 00 00 00 13 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (320515) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;31mE (320555) BLE_MESH: Busy sending message to DST 0x0006[0m
+[0;32mI (320555) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0006, opcode: 0x8201[0m
+[0;31mE (320565) EXAMPLE: Send generic client message failed, opcode 0x8201[0m
+[0;32mI (320685) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0006, opcode: 0x8202[0m
+addr: 0x0006
+[0;32mI (320685) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0006
+set addr send: 0x0006
+[0;32mI (320695) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (321495) mqtts_example: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/38
+DATA={"method":"setValue","params":{"onoff":0,"addr":"0x0007"}}
+HEX: 0x0007
+Integer value: 0
+send -> 0x0007,0addr send: 0x0007addr send 2: 0x0007[0;32mI (321555) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (321555) EXAMPLE_NVS: Store, data: 00 00 00 00 14 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (321565) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;31mE (321575) BLE_MESH: Busy sending message to DST 0x0007[0m
+[0;32mI (321575) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0007, opcode: 0x8201[0m
+[0;31mE (321585) EXAMPLE: Send generic client message failed, opcode 0x8201[0m
+[0;32mI (321765) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (321765) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+set addr send: 0x0007
+[0;32mI (321775) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (322315) mqtts_example: MQTT_EVENT_DATA[0m
+TOPIC=v1/devices/me/rpc/request/39
+DATA={"method":"setValue","params":{"onoff":1,"addr":"0x0007"}}
+HEX: 0x0007
+Integer value: 1
+send -> 0x0007,1addr send: 0x0007addr send 2: 0x0007[0;32mI (322375) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (322375) EXAMPLE_NVS: Store, data: 00 00 00 00 15 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (322385) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;31mE (322385) BLE_MESH: Busy sending message to DST 0x0007[0m
+[0;32mI (322395) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x00, addr: 0x0007, opcode: 0x8201[0m
+[0;31mE (322405) EXAMPLE: Send generic client message failed, opcode 0x8201[0m
+[0;33mW (332385) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (332395) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (332395) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+to set addr send: 0x0007
+common2.addr=0x0007
+[0;32mI (332505) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+addr: 0x0007
+[0;32mI (332505) EXAMPLE: Node found: unicast = 0x0005[0m
+Found element with address: 0x0007
+set addr send: 0x0007
+[0;32mI (332515) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;31mE (2025465) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (2025465) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (2025465) mqtt_client: Error transport connect[0m
+[0;32mI (2025465) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (2025475) mqtts_example: Last error reported from esp-tls: 0x8006[0m
+[0;32mI (2025475) mqtts_example: Last errno string (Success)[0m
+[0;32mI (2025485) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2035495) mqtts_example: Other event id:7[0m
+[0;31mE (2045505) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (2045505) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (2045505) mqtt_client: Error transport connect[0m
+[0;32mI (2045505) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (2045515) mqtts_example: Last error reported from esp-tls: 0x8006[0m
+[0;32mI (2045515) mqtts_example: Last errno string (Success)[0m
+[0;32mI (2045525) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2055535) mqtts_example: Other event id:7[0m
+[0;31mE (2065545) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (2065545) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (2065545) mqtt_client: Error transport connect[0m
+[0;32mI (2065545) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (2065555) mqtts_example: Last error reported from esp-tls: 0x8006[0m
+[0;32mI (2065555) mqtts_example: Last errno string (Success)[0m
+[0;32mI (2065565) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2075575) mqtts_example: Other event id:7[0m
+[0;31mE (2085585) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (2085585) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (2085585) mqtt_client: Error transport connect[0m
+[0;32mI (2085585) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (2085595) mqtts_example: Last error reported from esp-tls: 0x8006[0m
+[0;32mI (2085595) mqtts_example: Last errno string (Success)[0m
+[0;32mI (2085605) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2095615) mqtts_example: Other event id:7[0m
+I (2103905) wifi:bcn_timeout,ap_probe_send_start
+[0;31mE (2105625) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (2105625) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (2105625) mqtt_client: Error transport connect[0m
+[0;32mI (2105625) mqtts_example: MQTT_EVENT_ERROR[0m
+[0;31mE (2105635) mqtts_example: Last error reported from esp-tls: 0x8006[0m
+[0;32mI (2105635) mqtts_example: Last errno string (Success)[0m
+[0;32mI (2105645) mqtts_example: MQTT_EVENT_DISCONNECTED[0m
+I (2106405) wifi:ap_probe_send over, resett wifi status to disassoc
+I (2106405) wifi:state: run -> init (c800)
+I (2106415) wifi:pm stop, total sleep time: 1802797781 us / 2104652965 us
+
+I (2106415) wifi:<ba-del>idx:0, tid:0
+I (2106415) wifi:new:<9,0>, old:<9,0>, ap:<255,255>, sta:<9,0>, prof:1
+[0;32mI (2106435) EXAMPLE: retry to connect to the AP[0m
+[0;32mI (2106435) EXAMPLE: connect to the AP fail[0m
+I (2106515) wifi:new:<9,0>, old:<9,0>, ap:<255,255>, sta:<9,0>, prof:1
+I (2106515) wifi:state: init -> auth (b0)
+I (2106605) wifi:state: auth -> assoc (0)
+I (2106615) wifi:state: assoc -> run (10)
+I (2106665) wifi:connected with Turtlee, aid = 2, channel 9, BW20, bssid = 86:7f:20:31:e6:bb
+I (2106665) wifi:security: WPA2-PSK, phy: bgn, rssi: -85
+I (2106675) wifi:pm start, type: 1
+
+I (2106705) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (2108675) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (2108675) EXAMPLE: got ip:172.20.10.3[0m
+[0;32mI (2115655) mqtts_example: Other event id:7[0m
+I (2118615) wifi:<ba-add>idx:0 (ifx:0, 86:7f:20:31:e6:bb), tid:0, ssn:5, winSize:64
+[0;32mI (2118695) mqtts_example: MQTT_EVENT_CONNECTED[0m
+[0;32mI (2118695) mqtts_example: sent subscribe successful, msg_id=11131[0m
+[0;32mI (2118735) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=11131[0m

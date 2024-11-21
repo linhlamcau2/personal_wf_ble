@@ -1,0 +1,1173 @@
+��j%�(39) boot.esp32:�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 21 2024 09:56:26[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (99) boot: End of partition table[0m
+[0;32mI (103) boot: Defaulting to factory image[0m
+[0;32mI (108) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=369ach (223660) map[0m
+[0;32mI (193) esp_image: segment 1: paddr=000469d4 vaddr=3ffbdb60 size=0518ch ( 20876) load[0m
+[0;32mI (201) esp_image: segment 2: paddr=0004bb68 vaddr=40080000 size=044b0h ( 17584) load[0m
+[0;32mI (208) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=b8604h (755204) map[0m
+[0;32mI (467) esp_image: segment 4: paddr=0010862c vaddr=400844b0 size=12974h ( 76148) load[0m
+[0;32mI (509) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (509) boot: Disabling RNG early entropy source...[0m
+[0;32mI (521) cpu_start: Multicore app[0m
+[0;32mI (529) cpu_start: Pro cpu start user code[0m
+[0;32mI (529) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (529) cpu_start: Application information:[0m
+[0;32mI (532) cpu_start: Project name:     onoff_client[0m
+[0;32mI (538) cpu_start: App version:      1[0m
+[0;32mI (542) cpu_start: Compile time:     Oct 29 2024 14:26:13[0m
+[0;32mI (548) cpu_start: ELF file SHA256:  df7c1dbda...[0m
+[0;32mI (554) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (559) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (564) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (569) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (574) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (581) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (587) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (593) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (599) heap_init: At 3FFCB0D0 len 00014F30 (83 KiB): DRAM[0m
+[0;32mI (605) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (611) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (618) heap_init: At 40096E24 len 000091DC (36 KiB): IRAM[0m
+[0;32mI (626) spi_flash: detected chip: generic[0m
+[0;32mI (629) spi_flash: flash io: dio[0m
+[0;32mI (633) coexist: coex firmware version: d96c1e51f[0m
+[0;32mI (639) main_task: Started on CPU0[0m
+[0;32mI (649) main_task: Calling app_main()[0m
+[0;32mI (649) EXAMPLE: Initializing...[0m
+[0;32mI (649) gpio: GPIO[25]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (659) gpio: GPIO[26]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (669) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+use esp timer !!!
+[0;31mE (679) esp_timer: Task is already initialized[0m
+[0;32mI (679) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:3 [0m
+[0;32mI (739) BTDM_INIT: BT controller compile version [4012cfb][0m
+[0;32mI (739) BTDM_INIT: Bluetooth MAC: 30:ae:a4:98:71:1e[0m
+[0;32mI (739) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (1139) EXAMPLE_NVS: Open namespace done, name "mesh_example"[0m
+Bluetooth Mesh v1.1 commit: [10f7fdc1a9]
+[0;32mI (1259) EXAMPLE: BLE Mesh Provisioner initialized[0m
+[0;33mW (1269) BLE_MESH: AppKey exists, AppKeyIndex updated[0m
+[0;32mI (1269) EXAMPLE: ESP_BLE_MESH_PROVISIONER_PROV_ENABLE_COMP_EVT, err_code 0[0m
+[0;32mI (1269) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_LOCAL_APP_KEY_COMP_EVT, err_code 0[0m
+[0;32mI (1279) EXAMPLE: ESP_BLE_MESH_PROVISIONER_BIND_APP_KEY_TO_MODEL_COMP_EVT, err_code 0[0m
+[0;32mI (1429) EXAMPLE: ESP_BLE_MESH_PROVISIONER_RECV_UNPROV_ADV_PKT_EVT[0m
+[0;32mI (1429) EXAMPLE: address: 030402afa4c3, address type: 0, adv type: 3[0m
+[0;32mI (1429) EXAMPLE: device uuid: c3250bcbc188523ea1dd316afa1dca0a[0m
+[0;32mI (1439) EXAMPLE: oob info: 0, bearer: PB-ADV[0m
+[0;32mI (1449) EXAMPLE: PB-ADV link open[0m
+[0;32mI (1449) EXAMPLE: ESP_BLE_MESH_PROVISIONER_ADD_UNPROV_DEV_COMP_EVT, err_code 0[0m
+[0;32mI (7739) EXAMPLE: node index: 0x0, unicast address: 0x05, element num: 3, netkey index: 0x00[0m
+[0;32mI (7739) EXAMPLE: device uuid: c3250bcbc188523ea1dd316afa1dca0a[0m
+element: 0x0005
+[0;32mI (7769) EXAMPLE: ESP_BLE_MESH_PROVISIONER_SET_NODE_NAME_COMP_EVT, err_code 0[0m
+[0;32mI (7769) EXAMPLE: Node 0 name is: NODE-0[0m
+[0;32mI (8019) EXAMPLE: PB-ADV link close, reason 0x00[0m
+[0;32mI (9309) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x00, addr: 0x0005, opcode: 0x8008[0m
+[0;32mI (9309) EXAMPLE: composition data 1102070033336900070000000602000002000300001003120412110200001102010000000301001003120412110200000000030100100312041211020000[0m
+[0;32mI (10369) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x0000[0m
+[0;32mI (10609) EXAMPLE: example_ble_mesh_config_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x803d[0m
+[0;31mE (11259) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (11259) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (11259) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (11269) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (11279) EXAMPLE_NVS: Store, data: 00 00 00 00 01 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (11279) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (20629) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (20639) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8201[0m
+[0;32mI (20789) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x00, addr: 0x0005, opcode: 0x8201[0m
+[0;32mI (20789) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_GET onoff: 0x01[0m
+[0;31mE (21289) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (21289) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (21289) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (21309) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (21319) EXAMPLE_NVS: Store, data: 00 00 00 00 03 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (21319) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (30819) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (30819) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (30899) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (30899) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (31359) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (31369) EXAMPLE_NVS: Store, data: 00 00 00 00 05 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (31369) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (41339) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (41339) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;32mI (41469) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (41469) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (41499) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (41499) EXAMPLE_NVS: Store, data: 00 00 00 00 07 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (41499) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (51469) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (51469) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;32mI (51549) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (51549) EXAMPLE_NVS: Store, data: 00 00 00 00 09 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (51549) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (51829) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (51829) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;31mE (61559) BLE_MESH: Busy sending message to DST 0x0007[0m
+[0;32mI (61559) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;31mE (61559) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (61579) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (61589) EXAMPLE_NVS: Store, data: 00 00 00 00 0a 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (61589) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;33mW (61589) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (61599) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (61679) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (61679) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (63619) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (63619) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (63629) mqtt_client: Client was not initialized[0m
+[0;31mE (63639) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (67009) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (67009) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (67019) mqtt_client: Client was not initialized[0m
+[0;31mE (67019) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (69069) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (69069) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (69079) mqtt_client: Client was not initialized[0m
+[0;31mE (69079) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (70969) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (70969) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (70979) mqtt_client: Client was not initialized[0m
+[0;31mE (70979) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (71629) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (71639) EXAMPLE_NVS: Store, data: 00 00 00 00 0c 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (71649) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (71669) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (71669) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (73169) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (73169) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (73179) mqtt_client: Client was not initialized[0m
+[0;31mE (73179) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (75309) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (75309) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (75319) mqtt_client: Client was not initialized[0m
+[0;31mE (75319) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (77229) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (77229) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (77239) mqtt_client: Client was not initialized[0m
+[0;31mE (77239) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (78949) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (78949) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (78959) mqtt_client: Client was not initialized[0m
+[0;31mE (78959) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (80969) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (80969) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (80979) mqtt_client: Client was not initialized[0m
+[0;31mE (80979) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (81689) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (81699) EXAMPLE_NVS: Store, data: 00 00 00 00 0d 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (81699) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (81769) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (81769) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (83109) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (83109) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (83119) mqtt_client: Client was not initialized[0m
+[0;31mE (83119) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (85009) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (85009) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (85019) mqtt_client: Client was not initialized[0m
+[0;31mE (85019) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (87429) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (87429) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (87439) mqtt_client: Client was not initialized[0m
+[0;31mE (87439) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (89569) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (89569) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (89579) mqtt_client: Client was not initialized[0m
+[0;31mE (89579) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (91109) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (91109) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (91119) mqtt_client: Client was not initialized[0m
+[0;31mE (91119) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (91749) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (91749) EXAMPLE_NVS: Store, data: 00 00 00 00 0e 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (91749) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (93109) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (93109) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (93119) mqtt_client: Client was not initialized[0m
+[0;31mE (93119) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (95089) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (95089) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (95099) mqtt_client: Client was not initialized[0m
+[0;31mE (95099) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (96989) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (96989) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (96999) mqtt_client: Client was not initialized[0m
+[0;31mE (96999) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (98969) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (98969) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (98979) mqtt_client: Client was not initialized[0m
+[0;31mE (98979) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (101189) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (101189) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (101199) mqtt_client: Client was not initialized[0m
+[0;31mE (101199) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;33mW (101719) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (101719) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;32mI (101799) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (101799) EXAMPLE_NVS: Store, data: 00 00 00 00 10 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (101819) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (101819) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (101809) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (103109) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (103109) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (103119) mqtt_client: Client was not initialized[0m
+[0;31mE (103119) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (105099) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (105099) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (105109) mqtt_client: Client was not initialized[0m
+[0;31mE (105109) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (107149) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (107149) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (107159) mqtt_client: Client was not initialized[0m
+[0;31mE (107159) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (109249) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (109249) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (109259) mqtt_client: Client was not initialized[0m
+[0;31mE (109259) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (110949) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (110949) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (110959) mqtt_client: Client was not initialized[0m
+[0;31mE (110959) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;33mW (111849) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (111859) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;32mI (111909) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (111909) EXAMPLE_NVS: Store, data: 00 00 00 00 12 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (111909) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (113169) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (113169) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (114949) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (114949) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (114959) mqtt_client: Client was not initialized[0m
+[0;31mE (114959) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (116909) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (116909) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (116919) mqtt_client: Client was not initialized[0m
+[0;31mE (116919) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (118889) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (118889) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (118899) mqtt_client: Client was not initialized[0m
+[0;31mE (118899) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (121009) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (121009) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (121019) mqtt_client: Client was not initialized[0m
+[0;31mE (121019) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;33mW (121939) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (121949) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (121989) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (121989) EXAMPLE_NVS: Store, data: 00 00 00 00 14 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (121989) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (122079) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (122079) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (122939) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (122939) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (125009) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (125009) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (125019) mqtt_client: Client was not initialized[0m
+[0;31mE (125019) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (127069) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (127069) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (127079) mqtt_client: Client was not initialized[0m
+[0;31mE (127079) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (128989) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (128989) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (128999) mqtt_client: Client was not initialized[0m
+[0;31mE (128999) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (131769) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (131769) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (131779) mqtt_client: Client was not initialized[0m
+[0;31mE (131779) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (132049) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (132049) EXAMPLE_NVS: Store, data: 00 00 00 00 15 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (132049) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (133069) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (133069) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (133079) mqtt_client: Client was not initialized[0m
+[0;31mE (133079) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (134949) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (134949) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (134959) mqtt_client: Client was not initialized[0m
+[0;31mE (134959) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (136939) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (136939) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (136949) mqtt_client: Client was not initialized[0m
+[0;31mE (136949) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (139309) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (139309) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (139319) mqtt_client: Client was not initialized[0m
+[0;31mE (139319) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (141089) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (141089) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (141099) mqtt_client: Client was not initialized[0m
+[0;31mE (141099) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;33mW (142019) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (142019) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (142059) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (142059) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (142059) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (142089) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (142089) EXAMPLE_NVS: Store, data: 00 00 00 00 17 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (142089) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (142889) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (142889) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (142899) mqtt_client: Client was not initialized[0m
+[0;31mE (142899) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (145329) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (145329) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (145339) mqtt_client: Client was not initialized[0m
+[0;31mE (145339) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (146889) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (146889) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (146899) mqtt_client: Client was not initialized[0m
+[0;31mE (146899) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (149029) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (149029) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (149039) mqtt_client: Client was not initialized[0m
+[0;31mE (149039) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (151669) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (151669) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (151679) mqtt_client: Client was not initialized[0m
+[0;31mE (151679) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;33mW (152049) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (152049) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (152209) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (152209) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (152239) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (152239) EXAMPLE_NVS: Store, data: 00 00 00 00 19 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (152239) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (153049) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (153049) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (153059) mqtt_client: Client was not initialized[0m
+[0;31mE (153059) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (154969) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (154969) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (154979) mqtt_client: Client was not initialized[0m
+[0;31mE (154979) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (157149) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (157149) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (157159) mqtt_client: Client was not initialized[0m
+[0;31mE (157159) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (159149) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (159149) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (159159) mqtt_client: Client was not initialized[0m
+[0;31mE (159159) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (161129) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (161129) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (161139) mqtt_client: Client was not initialized[0m
+[0;31mE (161139) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;33mW (162199) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (162199) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;32mI (162279) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (162279) EXAMPLE_NVS: Store, data: 00 00 00 00 1b 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (162279) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (162329) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (162329) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (162969) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (162969) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (162979) mqtt_client: Client was not initialized[0m
+[0;31mE (162979) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (164929) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (164929) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (164939) mqtt_client: Client was not initialized[0m
+[0;31mE (164939) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (167249) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (167249) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (167259) mqtt_client: Client was not initialized[0m
+[0;31mE (167259) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (169089) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (169089) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (169099) mqtt_client: Client was not initialized[0m
+[0;31mE (169099) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (170959) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (170959) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (170969) mqtt_client: Client was not initialized[0m
+[0;31mE (170969) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;33mW (172329) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (172329) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;32mI (172369) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (172369) EXAMPLE_NVS: Store, data: 00 00 00 00 1d 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (172369) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (172499) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (172499) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (172929) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (172929) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (175069) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (175069) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (175079) mqtt_client: Client was not initialized[0m
+[0;31mE (175079) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (177049) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (177049) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (177059) mqtt_client: Client was not initialized[0m
+[0;31mE (177059) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (178989) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (178989) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (178999) mqtt_client: Client was not initialized[0m
+[0;31mE (178999) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (181219) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (181219) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (181229) mqtt_client: Client was not initialized[0m
+[0;31mE (181229) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (182419) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (182429) EXAMPLE_NVS: Store, data: 00 00 00 00 1e 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (182429) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (182929) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (182929) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (185149) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (185149) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (185159) mqtt_client: Client was not initialized[0m
+[0;31mE (185159) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (187059) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (187059) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (187069) mqtt_client: Client was not initialized[0m
+[0;31mE (187069) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (188939) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (188939) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (188949) mqtt_client: Client was not initialized[0m
+[0;31mE (188949) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (191249) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (191249) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (191259) mqtt_client: Client was not initialized[0m
+[0;31mE (191259) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (192489) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (192489) EXAMPLE_NVS: Store, data: 00 00 00 00 1f 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (192489) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (193269) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (193269) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (193279) mqtt_client: Client was not initialized[0m
+[0;31mE (193279) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (195169) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (195169) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (195179) mqtt_client: Client was not initialized[0m
+[0;31mE (195179) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (196889) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (196889) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (196899) mqtt_client: Client was not initialized[0m
+[0;31mE (196899) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (198989) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (198989) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (198999) mqtt_client: Client was not initialized[0m
+[0;31mE (198999) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (201189) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (201189) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (201199) mqtt_client: Client was not initialized[0m
+[0;31mE (201199) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;33mW (202459) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (202459) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (202499) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (202499) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (202499) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (202529) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (202529) EXAMPLE_NVS: Store, data: 00 00 00 00 21 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (202529) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (203389) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (203389) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (203399) mqtt_client: Client was not initialized[0m
+[0;31mE (203399) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (204909) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (204909) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (204919) mqtt_client: Client was not initialized[0m
+[0;31mE (204919) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (207069) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (207069) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (207079) mqtt_client: Client was not initialized[0m
+[0;31mE (207079) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (209009) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (209009) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (209019) mqtt_client: Client was not initialized[0m
+[0;31mE (209019) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (210889) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (210889) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (210899) mqtt_client: Client was not initialized[0m
+[0;31mE (210899) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;33mW (212489) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (212489) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (212579) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (212579) EXAMPLE_NVS: Store, data: 00 00 00 00 23 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (212579) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (212629) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (212629) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (213109) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (213109) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (213119) mqtt_client: Client was not initialized[0m
+[0;31mE (213119) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (217029) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (217029) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (217039) mqtt_client: Client was not initialized[0m
+[0;31mE (217039) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (218909) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (218909) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (218919) mqtt_client: Client was not initialized[0m
+[0;31mE (218919) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (220909) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (220909) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (220919) mqtt_client: Client was not initialized[0m
+[0;31mE (220919) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;31mE (222589) BLE_MESH: Busy sending message to DST 0x0006[0m
+[0;32mI (222589) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0006, opcode: 0x8202[0m
+[0;31mE (222589) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (222619) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (222619) EXAMPLE_NVS: Store, data: 00 00 00 00 24 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;33mW (222619) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (222629) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;32mI (222639) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (222789) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (222789) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (223109) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (223109) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (223119) mqtt_client: Client was not initialized[0m
+[0;31mE (223119) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (224969) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (224969) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (224979) mqtt_client: Client was not initialized[0m
+[0;31mE (224979) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (227169) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (227169) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (227179) mqtt_client: Client was not initialized[0m
+[0;31mE (227179) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (228169) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (228169) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (228179) mqtt_client: Client was not initialized[0m
+[0;31mE (228179) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (228889) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (228889) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (228899) mqtt_client: Client was not initialized[0m
+[0;31mE (228899) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (231139) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (231139) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (231149) mqtt_client: Client was not initialized[0m
+[0;31mE (231149) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (232679) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (232689) EXAMPLE_NVS: Store, data: 00 00 00 00 26 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (232689) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (235079) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (235079) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (237059) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (237059) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (237069) mqtt_client: Client was not initialized[0m
+[0;31mE (237069) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (239209) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (239209) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (239219) mqtt_client: Client was not initialized[0m
+[0;31mE (239219) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (241379) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (241379) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (241389) mqtt_client: Client was not initialized[0m
+[0;31mE (241389) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (242739) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (242749) EXAMPLE_NVS: Store, data: 00 00 00 00 27 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (242749) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (243149) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (243149) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (245169) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (245169) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (245179) mqtt_client: Client was not initialized[0m
+[0;31mE (245179) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (247089) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (247089) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (247099) mqtt_client: Client was not initialized[0m
+[0;31mE (247099) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (249099) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (249099) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (249109) mqtt_client: Client was not initialized[0m
+[0;31mE (249109) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (250949) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (250949) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (250959) mqtt_client: Client was not initialized[0m
+[0;31mE (250959) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (252809) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (252809) EXAMPLE_NVS: Store, data: 00 00 00 00 28 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (252809) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (252999) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (252999) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (253009) mqtt_client: Client was not initialized[0m
+[0;31mE (253009) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (253249) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (253249) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (255489) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (255489) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (255499) mqtt_client: Client was not initialized[0m
+[0;31mE (255499) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (257249) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (257249) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (257259) mqtt_client: Client was not initialized[0m
+[0;31mE (257259) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (259129) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (259129) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (259139) mqtt_client: Client was not initialized[0m
+[0;31mE (259139) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (261629) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (261629) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (261639) mqtt_client: Client was not initialized[0m
+[0;31mE (261639) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (262889) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (262889) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (262899) mqtt_client: Client was not initialized[0m
+[0;31mE (262899) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (262909) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (262919) EXAMPLE_NVS: Store, data: 00 00 00 00 29 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (262919) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (263299) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (263299) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (265049) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (265049) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (265059) mqtt_client: Client was not initialized[0m
+[0;31mE (265059) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (267129) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (267129) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (267139) mqtt_client: Client was not initialized[0m
+[0;31mE (267139) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (268889) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (268889) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (268899) mqtt_client: Client was not initialized[0m
+[0;31mE (268899) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (271089) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (271089) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (271099) mqtt_client: Client was not initialized[0m
+[0;31mE (271099) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (272969) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (272979) EXAMPLE_NVS: Store, data: 00 00 00 00 2a 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (272989) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (273009) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (273009) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (273009) mqtt_client: Client was not initialized[0m
+[0;31mE (273019) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (275269) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (275269) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (275279) mqtt_client: Client was not initialized[0m
+[0;31mE (275279) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (277289) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (277289) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (277299) mqtt_client: Client was not initialized[0m
+[0;31mE (277299) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (279109) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (279109) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (279119) mqtt_client: Client was not initialized[0m
+[0;31mE (279119) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (280989) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (280989) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (280999) mqtt_client: Client was not initialized[0m
+[0;31mE (280999) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;33mW (282949) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (282949) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;32mI (283029) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (283029) EXAMPLE_NVS: Store, data: 00 00 00 00 2c 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (283029) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (283079) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (283079) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (283089) mqtt_client: Client was not initialized[0m
+[0;31mE (283089) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (283549) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (283549) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (285149) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (285149) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (285159) mqtt_client: Client was not initialized[0m
+[0;31mE (285159) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (287069) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (287069) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (287079) mqtt_client: Client was not initialized[0m
+[0;31mE (287079) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (289089) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (289089) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (289099) mqtt_client: Client was not initialized[0m
+[0;31mE (289099) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (291089) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (291089) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (291099) mqtt_client: Client was not initialized[0m
+[0;31mE (291099) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;33mW (293079) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (293079) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;32mI (293119) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (293119) EXAMPLE_NVS: Store, data: 00 00 00 00 2e 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (293119) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (293299) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (293299) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (293649) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (293649) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (295109) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (295109) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (295119) mqtt_client: Client was not initialized[0m
+[0;31mE (295119) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (297069) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (297069) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (297079) mqtt_client: Client was not initialized[0m
+[0;31mE (297079) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (299209) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (299209) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (299219) mqtt_client: Client was not initialized[0m
+[0;31mE (299219) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (303049) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (303049) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (303059) mqtt_client: Client was not initialized[0m
+[0;31mE (303059) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (303169) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (303179) EXAMPLE_NVS: Store, data: 00 00 00 00 2f 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (303179) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (304929) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (304929) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (307129) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (307129) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (307139) mqtt_client: Client was not initialized[0m
+[0;31mE (307139) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (313229) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (313239) EXAMPLE_NVS: Store, data: 00 00 00 00 30 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (313239) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (313309) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (313309) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (315589) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (315589) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (315599) mqtt_client: Client was not initialized[0m
+[0;31mE (315599) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (318909) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (318909) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (318919) mqtt_client: Client was not initialized[0m
+[0;31mE (318919) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (323069) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (323069) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (323079) mqtt_client: Client was not initialized[0m
+[0;31mE (323079) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (323309) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (323309) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (323319) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (323319) EXAMPLE_NVS: Store, data: 00 00 00 00 31 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (323329) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (325289) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (325289) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (325299) mqtt_client: Client was not initialized[0m
+[0;31mE (325299) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (327349) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (327349) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (327359) mqtt_client: Client was not initialized[0m
+[0;31mE (327359) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (329519) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (329519) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (329529) mqtt_client: Client was not initialized[0m
+[0;31mE (329529) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (331409) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (331409) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (331419) mqtt_client: Client was not initialized[0m
+[0;31mE (331419) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (333409) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (333409) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (333419) mqtt_client: Client was not initialized[0m
+[0;31mE (333419) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (333429) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (333439) EXAMPLE_NVS: Store, data: 00 00 00 00 32 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (333439) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (337109) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (337109) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (337119) mqtt_client: Client was not initialized[0m
+[0;31mE (337119) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (338929) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (338929) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (338939) mqtt_client: Client was not initialized[0m
+[0;31mE (338939) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (341039) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (341039) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (341049) mqtt_client: Client was not initialized[0m
+[0;31mE (341049) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (342889) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (342889) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (342899) mqtt_client: Client was not initialized[0m
+[0;31mE (342899) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;33mW (343359) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (343369) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;32mI (343489) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (343499) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (343519) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (343529) EXAMPLE_NVS: Store, data: 00 00 00 00 34 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (343529) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (345029) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (345029) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (345039) mqtt_client: Client was not initialized[0m
+[0;31mE (345039) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (346989) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (346989) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (346999) mqtt_client: Client was not initialized[0m
+[0;31mE (346999) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (349209) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (349209) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (349219) mqtt_client: Client was not initialized[0m
+[0;31mE (349219) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (351559) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (351559) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (351569) mqtt_client: Client was not initialized[0m
+[0;31mE (351569) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (352989) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (352989) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (352999) mqtt_client: Client was not initialized[0m
+[0;31mE (352999) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;33mW (353489) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (353489) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;32mI (353569) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (353569) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (353599) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (353599) EXAMPLE_NVS: Store, data: 00 00 00 00 36 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (353599) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (354909) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (354909) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (357049) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (357049) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (357059) mqtt_client: Client was not initialized[0m
+[0;31mE (357059) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (358889) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (358889) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (358899) mqtt_client: Client was not initialized[0m
+[0;31mE (358899) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (361149) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (361149) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (361159) mqtt_client: Client was not initialized[0m
+[0;31mE (361159) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (363049) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (363049) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (363059) mqtt_client: Client was not initialized[0m
+[0;31mE (363059) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (363649) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (363659) EXAMPLE_NVS: Store, data: 00 00 00 00 37 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (363659) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (365069) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (365069) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (367049) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (367049) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (367059) mqtt_client: Client was not initialized[0m
+[0;31mE (367059) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (369009) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (369009) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (369019) mqtt_client: Client was not initialized[0m
+[0;31mE (369019) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (370869) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (370869) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (370879) mqtt_client: Client was not initialized[0m
+[0;31mE (370879) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (372889) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (372889) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (372899) mqtt_client: Client was not initialized[0m
+[0;31mE (372899) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (373709) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (373709) EXAMPLE_NVS: Store, data: 00 00 00 00 38 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (373709) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (373849) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (373849) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (375009) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (375009) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (375019) mqtt_client: Client was not initialized[0m
+[0;31mE (375019) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (377009) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (377009) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (377019) mqtt_client: Client was not initialized[0m
+[0;31mE (377019) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (378929) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (378929) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (378939) mqtt_client: Client was not initialized[0m
+[0;31mE (378939) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (381289) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (381289) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (381299) mqtt_client: Client was not initialized[0m
+[0;31mE (381299) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (383029) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (383029) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (383039) mqtt_client: Client was not initialized[0m
+[0;31mE (383039) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (383769) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (383769) EXAMPLE_NVS: Store, data: 00 00 00 00 39 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (383769) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (383949) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (383949) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (385549) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (385549) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (385559) mqtt_client: Client was not initialized[0m
+[0;31mE (385559) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (387189) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (387189) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (387199) mqtt_client: Client was not initialized[0m
+[0;31mE (387199) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (388889) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (388889) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (388899) mqtt_client: Client was not initialized[0m
+[0;31mE (388899) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (390969) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (390969) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (390979) mqtt_client: Client was not initialized[0m
+[0;31mE (390979) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (393229) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (393229) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (393239) mqtt_client: Client was not initialized[0m
+[0;31mE (393239) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (393829) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (393829) EXAMPLE_NVS: Store, data: 00 00 00 00 3a 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (393829) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (394989) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (394989) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (394999) mqtt_client: Client was not initialized[0m
+[0;31mE (394999) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (397059) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (397059) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (397069) mqtt_client: Client was not initialized[0m
+[0;31mE (397069) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (399269) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (399269) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (399279) mqtt_client: Client was not initialized[0m
+[0;31mE (399279) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (400889) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (400889) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (400899) mqtt_client: Client was not initialized[0m
+[0;31mE (400899) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (402869) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (402869) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (402879) mqtt_client: Client was not initialized[0m
+[0;31mE (402879) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;33mW (403799) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (403799) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;32mI (403879) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (403879) EXAMPLE_NVS: Store, data: 00 00 00 00 3c 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (403879) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (405009) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (405009) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (405019) mqtt_client: Client was not initialized[0m
+[0;31mE (405019) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (407089) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (407089) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (407099) mqtt_client: Client was not initialized[0m
+[0;31mE (407099) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (408969) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (408969) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (408979) mqtt_client: Client was not initialized[0m
+[0;31mE (408979) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (411029) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (411029) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (411039) mqtt_client: Client was not initialized[0m
+[0;31mE (411039) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (412889) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (412889) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (412899) mqtt_client: Client was not initialized[0m
+[0;31mE (412899) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;33mW (413829) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (413829) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0005, opcode: 0x8202[0m
+[0;33mW (413919) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (413929) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;31mE (413929) BLE_MESH: Busy sending message to DST 0x0005[0m
+[0;32mI (413939) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0xfffffff0, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;31mE (413949) EXAMPLE: Send generic client message failed, opcode 0x8202[0m
+[0;32mI (413959) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (413959) EXAMPLE_NVS: Store, data: 00 00 00 00 3f 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (413969) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (414039) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (414039) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (414889) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (414889) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (417069) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (417069) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (417079) mqtt_client: Client was not initialized[0m
+[0;31mE (417079) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (418929) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (418929) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (418939) mqtt_client: Client was not initialized[0m
+[0;31mE (418939) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (420889) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (420889) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (420899) mqtt_client: Client was not initialized[0m
+[0;31mE (420899) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (423149) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (423149) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (423159) mqtt_client: Client was not initialized[0m
+[0;31mE (423159) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (424029) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (424029) EXAMPLE_NVS: Store, data: 00 00 00 00 40 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (424029) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (425289) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (425289) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (427109) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (427109) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (427119) mqtt_client: Client was not initialized[0m
+[0;31mE (427119) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (428869) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (428869) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (428879) mqtt_client: Client was not initialized[0m
+[0;31mE (428879) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (431189) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (431189) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (431199) mqtt_client: Client was not initialized[0m
+[0;31mE (431199) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (432909) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (432909) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (432919) mqtt_client: Client was not initialized[0m
+[0;31mE (432919) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (434089) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (434089) EXAMPLE_NVS: Store, data: 00 00 00 00 41 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (434089) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (434189) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (434189) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (435169) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (435169) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (435179) mqtt_client: Client was not initialized[0m
+[0;31mE (435179) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (436909) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (436909) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (436919) mqtt_client: Client was not initialized[0m
+[0;31mE (436919) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (439069) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (439069) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (439079) mqtt_client: Client was not initialized[0m
+[0;31mE (439079) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (441089) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (441089) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (441099) mqtt_client: Client was not initialized[0m
+[0;31mE (441099) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (443009) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (443009) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (443019) mqtt_client: Client was not initialized[0m
+[0;31mE (443019) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (444209) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (444209) EXAMPLE_NVS: Store, data: 00 00 00 00 42 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (444209) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (444249) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (444249) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (445589) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (445589) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (445599) mqtt_client: Client was not initialized[0m
+[0;31mE (445599) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (446969) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (446969) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (446979) mqtt_client: Client was not initialized[0m
+[0;31mE (446979) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (449069) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (449069) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (449079) mqtt_client: Client was not initialized[0m
+[0;31mE (449079) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (451029) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (451029) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (451039) mqtt_client: Client was not initialized[0m
+[0;31mE (451039) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (453469) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (453469) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (453479) mqtt_client: Client was not initialized[0m
+[0;31mE (453479) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (454269) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (454269) EXAMPLE_NVS: Store, data: 00 00 00 00 43 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (454269) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (454889) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (454889) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (454899) mqtt_client: Client was not initialized[0m
+[0;31mE (454899) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (456949) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (456949) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (456959) mqtt_client: Client was not initialized[0m
+[0;31mE (456959) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (458969) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (458969) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (458979) mqtt_client: Client was not initialized[0m
+[0;31mE (458979) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (461149) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (461149) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (461159) mqtt_client: Client was not initialized[0m
+[0;31mE (461159) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (463009) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (463009) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (463019) mqtt_client: Client was not initialized[0m
+[0;31mE (463019) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;33mW (464239) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (464239) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;32mI (464329) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (464329) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (464339) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (464349) EXAMPLE_NVS: Store, data: 00 00 00 00 45 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (464349) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (465089) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (465089) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (465099) mqtt_client: Client was not initialized[0m
+[0;31mE (465099) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (469469) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (469469) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (469479) mqtt_client: Client was not initialized[0m
+[0;31mE (469479) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (470889) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (470889) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (470899) mqtt_client: Client was not initialized[0m
+[0;31mE (470899) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (472909) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (472909) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (472919) mqtt_client: Client was not initialized[0m
+[0;31mE (472919) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;33mW (474359) BLE_MESH: Receive generic status message timeout[0m
+[0;32mI (474369) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x03, addr: 0x0006, opcode: 0x8202[0m
+[0;32mI (474439) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (474439) EXAMPLE_NVS: Store, data: 00 00 00 00 47 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (474439) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (474469) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (474469) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (474989) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (474989) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (476889) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (476889) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (476899) mqtt_client: Client was not initialized[0m
+[0;31mE (476899) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (479229) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (479229) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (479239) mqtt_client: Client was not initialized[0m
+[0;31mE (479239) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (480899) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (480899) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (480909) mqtt_client: Client was not initialized[0m
+[0;31mE (480909) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (482949) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (482949) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (482959) mqtt_client: Client was not initialized[0m
+[0;31mE (482959) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (484489) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (484499) EXAMPLE_NVS: Store, data: 00 00 00 00 48 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (484499) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (485009) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0007, opcode: 0x8202[0m
+[0;32mI (485009) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x00[0m
+[0;32mI (487129) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (487129) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (487139) mqtt_client: Client was not initialized[0m
+[0;31mE (487139) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (488869) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (488869) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (488879) mqtt_client: Client was not initialized[0m
+[0;31mE (488879) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (491339) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (491339) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (491349) mqtt_client: Client was not initialized[0m
+[0;31mE (491349) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (493599) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (493599) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (493609) mqtt_client: Client was not initialized[0m
+[0;31mE (493609) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (494549) EXAMPLE_NVS: Store, key "onoff_client", length 21[0m
+[0;32mI (494549) EXAMPLE_NVS: Store, data: 00 00 00 00 49 12 12 12 12 12 12 12 12 12 12 12 [0m
+[0;32mI (494549) EXAMPLE_NVS: Store, data: 12 12 12 12 12 [0m
+[0;32mI (494619) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x01, addr: 0x0005, opcode: 0x8202[0m
+[0;32mI (494619) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_SET onoff: 0x01[0m
+[0;32mI (495029) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (495029) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x01[0m
+[0;31mE (495039) mqtt_client: Client was not initialized[0m
+[0;31mE (495039) mqtts_example: Failed to publish message: ESP_FAIL[0m
+[0;32mI (496989) EXAMPLE: example_ble_mesh_generic_client_cb, error_code = 0x00, event = 0x02, addr: 0x0007, opcode: 0x8204[0m
+[0;32mI (496989) EXAMPLE: ESP_BLE_MESH_MODEL_OP_GEN_ONOFF_STATUS onoff: 0x00[0m
+[0;31mE (496999) mqtt_client: Client was not initialized[0m
+[0;31mE (496999) mqtts_example: Failed to publish message: ESP_FAIL[0m
